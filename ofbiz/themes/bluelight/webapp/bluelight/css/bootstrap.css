@@ -8183,3 +8183,62 @@ a.text-dark:focus, a.text-dark:hover {
   visibility: hidden !important;
 }
 /*# sourceMappingURL=bootstrap.css.map */
+
+/* unviversal css */
+ul{
+    padding-left: 0;
+}
+li{
+    list-style-type: none;
+}
+
+/* custom css for main-navigation */
+.main-nav-container{
+    position: relative;
+}
+#main-navigation h2{
+    border: 1px solid #868e96;
+    border-radius: 0;
+}
+#main-navigation h2:hover{
+    background-color: #000;
+}
+#navbarSupportedContent{   
+    position: absolute;
+    top:3em;
+}
+#navbarSupportedContent a:hover{
+    color: #FFF !important;
+}
+
+
+/* custome css for app-navigation */
+#app-navigation{
+    float:left;
+    position: relative;
+}
+#app-navigation h2{
+    font-size: 1.2rem;
+    color: #868e96;
+    margin-top: .5em;
+    border: 1px solid #868e96;
+    padding: .17em .5em;
+}
+#app-navigation ul li ul{
+    width: 100%;
+    position: absolute;
+    top: 3.5em;
+    font-size: .9em;
+    padding: 0 0 .5em .5em;
+    background-color: #343a40;
+}
+#app-navigation ul a{
+    color: #868e96;
+}
+
+/* breadcrumb */
+.breadcrumbs-sep{
+    float: left;
+    color: #868e96;
+    margin: .8em 0 0 1em;
+}

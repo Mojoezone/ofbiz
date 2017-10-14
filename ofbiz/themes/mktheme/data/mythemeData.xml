@@ -21,7 +21,7 @@ under the License.
 <entity-engine-xml>
     <VisualTheme visualThemeId="MKTHEME" visualThemeSetId="BACKOFFICE" description="MK VisualTheme"/>
     <VisualThemeResource visualThemeId="MKTHEME" resourceTypeEnumId="VT_NAME" resourceValue="MKTHEME" sequenceId="01"/>
-    <VisualThemeResource visualThemeId="MKTHEME" resourceTypeEnumId="VT_HDR_IMAGE_URL" resourceValue="/images/MKLogo.PNG" sequenceId="01"/>
+    <VisualThemeResource visualThemeId="MKTHEME" resourceTypeEnumId="VT_HDR_IMAGE_URL" resourceValue="/images/LogoBlack.png" sequenceId="01"/>
     <VisualThemeResource visualThemeId="MKTHEME" resourceTypeEnumId="VT_SHORTCUT_ICON" resourceValue="/images/ofbiz.ico" sequenceId="01"/>
     <VisualThemeResource visualThemeId="MKTHEME" resourceTypeEnumId="VT_SCREENSHOT" resourceValue="/mktheme/screenshot.jpg" sequenceId="01"/>
     

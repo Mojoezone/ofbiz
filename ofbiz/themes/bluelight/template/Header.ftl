@@ -137,7 +137,7 @@ under the License.
       </a>
     </div>
     <div class="container-fluid">
-      <ul class="row">
+      <ul class="row mb-0">
       
      <#if userLogin?has_content>
         <#if (userPreferences.COMPACT_HEADER)?default("N") == "Y">
@@ -160,10 +160,11 @@ under the License.
                 <#if organizationLogoLinkURL?has_content>
                     <li class="pt-2"><a href="<@ofbizUrl>${logoLinkURL}</@ofbizUrl>"><img alt="${layoutSettings.companyName}" src="<@ofbizContentUrl>${StringUtil.wrapString(organizationLogoLinkURL)}</@ofbizContentUrl>"></a></li>
                     <#else>
-                    <li class="col-2 list-unstyled"><a href="<@ofbizUrl>${logoLinkURL}</@ofbizUrl>"><img  class="img-thumbnail" alt="${layoutSettings.companyName}" src="<@ofbizContentUrl>${StringUtil.wrapString(headerImageUrl)}</@ofbizContentUrl>"/></a></li>
+                    <li class="col-1 list-unstyled mt-2"><a href="<@ofbizUrl>${logoLinkURL}</@ofbizUrl>"><img  class="img-thumbnail border-0" style="background-color:transparent" alt="${layoutSettings.companyName}" src="<@ofbizContentUrl>${StringUtil.wrapString(headerImageUrl)}</@ofbizContentUrl>"/></a></li>
                 </#if>
           </#if>
           </#if>
+          
           
           <#if layoutSettings.middleTopMessage1?has_content && layoutSettings.middleTopMessage1 != " ">
             <li class="col-3 list-unstyled small" style="display:none;">
@@ -177,7 +178,7 @@ under the License.
           </#if>
         </#if>
         
-        <li class="col-9 list-unstyled list-inline-item small">
+        <li class="col-11 list-unstyled list-inline-item small">
           <ul id="preferences-menu" class="list-inline-item float-right small">
             <#if userLogin??>
               <#if userLogin.partyId??>

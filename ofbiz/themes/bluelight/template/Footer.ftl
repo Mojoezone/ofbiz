@@ -49,7 +49,7 @@ under the License.
 </#if>
 </#if>
 <script>
-jQuery("#content-main-section").addClass("container-fluid");
+
 jQuery("table").addClass("table table-responsive table-striped");
 jQuery("table thead").addClass("table-inverse small");
 jQuery("table th").addClass("table-inverse");

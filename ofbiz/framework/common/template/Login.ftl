@@ -26,20 +26,20 @@ under the License.
 <#else>
   <#assign focusName = true>
 </#if>
-
-<center class="d-flex justify-content-center">
+                              
+<center class="d-flex justify-content-center mt-5">
   <div class="screenlet login-screenlet bg-dark p-2 text-white rounded pt-4 pr-4 pl-3">
-    <div class="screenlet-title-bar mb-3">
-      <h3 class="h2">${uiLabelMap.CommonRegistered}</h3>
+    <div class="screenlet-title-bar mb-4">
+      <h3 class="h5">${uiLabelMap.CommonRegistered}</h3>
     </div>
     <div class="screenlet-body">
       <form method="post" action="<@ofbizUrl>login</@ofbizUrl>" name="loginform">
-        <table class="basic-table" cellspacing="0" style="border-collapse:collapse; border: none;">
-          <tr>
+        <table class="basic-table mb-0" cellspacing="0" style="border-collapse:collapse; border: none;">
+          <tr style="background-color: transparent;">
             <td class="label mr-2 mb-1"  style="border-top: none;">${uiLabelMap.CommonUsername}</td>
             <td class="pt-1" style="border-top: none; padding: 0;"><input type="text" name="USERNAME" value="${username}" size="20"/></td>
           </tr>
-          <tr style="background-color: transparent;">
+          <tr>
             <td class="label mr-2" style="border-top: none;">${uiLabelMap.CommonPassword}</td>
             <td  class="pt-1" style="border-top: none; padding: 0;"><input class="form-control" type="password" name="PASSWORD" value="" size="20" /></td>
           </tr>
@@ -53,7 +53,7 @@ under the License.
                 <input type="hidden" name="userTenantId" value="${requestAttributes.userTenantId!}"/>
             </#if>
           </#if>
-          <tr>
+          <tr style="background-color: transparent;">
             <td colspan="2" align="center" style="border-top: none; padding: 0;">
               <input class="rounded btn mt-2" type="submit" value="${uiLabelMap.CommonLogin}"/>
             </td>

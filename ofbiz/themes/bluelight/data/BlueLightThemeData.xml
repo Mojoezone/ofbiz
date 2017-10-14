@@ -21,7 +21,7 @@ under the License.
 <entity-engine-xml>
     <VisualTheme visualThemeId="BLUELIGHT" visualThemeSetId="BACKOFFICE" description="BlueLight Theme: breadcrumbs, drop-down menus and rounded corners"/>
     <VisualThemeResource visualThemeId="BLUELIGHT" resourceTypeEnumId="VT_NAME" resourceValue="BLUELIGHT" sequenceId="01"/>
-    <VisualThemeResource visualThemeId="BLUELIGHT" resourceTypeEnumId="VT_HDR_IMAGE_URL" resourceValue="/images/MKLogo.PNG" sequenceId="01"/>
+    <VisualThemeResource visualThemeId="BLUELIGHT" resourceTypeEnumId="VT_HDR_IMAGE_URL" resourceValue="/images/LogoBlack.png" sequenceId="01"/>
     <VisualThemeResource visualThemeId="BLUELIGHT" resourceTypeEnumId="VT_SHORTCUT_ICON" resourceValue="/images/ofbiz.ico" sequenceId="01"/>
     <VisualThemeResource visualThemeId="BLUELIGHT" resourceTypeEnumId="VT_SCREENSHOT" resourceValue="/bluelight/screenshot.jpg" sequenceId="01"/>
     
@@ -58,7 +58,7 @@ under the License.
     
     
     <VisualThemeResource visualThemeId="BLUELIGHT" resourceTypeEnumId="VT_HDR_JAVASCRIPT" resourceValue="/bluelight/js/bootstrap.js" sequenceId="30"/>
-    <VisualThemeResource visualThemeId="BLUELIGHT" resourceTypeEnumId="VT_FTR_JAVASCRIPT" resourceValue="/bluelight/js/custom.js" sequenceId="33"/>
+    <VisualThemeResource visualThemeId="BLUELIGHT" resourceTypeEnumId="VT_HDR_JAVASCRIPT" resourceValue="/bluelight/js/dropdown.js" sequenceId="33"/>
     
     <!-- ftl references -->
     <VisualThemeResource visualThemeId="BLUELIGHT" resourceTypeEnumId="VT_HDR_TMPLT_LOC" resourceValue="component://bluelight/template/Header.ftl" sequenceId="01"/>
