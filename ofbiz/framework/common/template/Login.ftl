@@ -27,8 +27,8 @@ under the License.
   <#assign focusName = true>
 </#if>
                               
-<center class="d-flex justify-content-center mt-5">
-  <div class="screenlet login-screenlet bg-dark p-2 text-white rounded pt-4 pr-4 pl-3">
+<center class="d-flex justify-content-center" style="margin-top: 10%;">
+  <div class="screenlet login-screenlet bg-dark p-2 text-white rounded pt-4 pr-4 pl-3 pb-4">
     <div class="screenlet-title-bar mb-4">
       <h3 class="h5">${uiLabelMap.CommonRegistered}</h3>
     </div>

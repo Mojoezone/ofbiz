@@ -17,7 +17,7 @@ specific language governing permissions and limitations
 under the License.
 -->
 
-<center class="d-flex justify-content-center mb-4">
+<center class="d-flex justify-content-center mb-4" style="margin-top: 10%;">
   <div class="screenlet login-screenlet bg-dark p-2 text-white rounded pt-4 pr-4 pl-3">
     <div class="screenlet-title-bar mb-3 h2">
       <#if securityQuestion?has_content>
@@ -46,7 +46,7 @@ under the License.
                 </td>
               </tr>
             <#else>
-              <tr>
+              <tr style="background-color:transparent;">
                 <td class="label mr-2" style="border-top: none;">${uiLabelMap.CommonUsername}</td>
                 <td class="pt-1" style="border-top: none; padding:0;"><input type="text" size="20" name="USERNAME" value="<#if requestParameters.USERNAME?has_content>${requestParameters.USERNAME}<#elseif autoUserLogin?has_content>${autoUserLogin.userLoginId}</#if>" /></td>
               </tr>
@@ -58,7 +58,7 @@ under the License.
               </td>
             </tr>
           <#else>
-            <tr>
+            <tr style="background-color:transparent;">
               <td colspan="2" align="center" style="border-top: none;">
                 ${uiLabelMap.PartyUserLoginMissingError}
               </td>

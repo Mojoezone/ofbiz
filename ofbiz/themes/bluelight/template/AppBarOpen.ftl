@@ -44,14 +44,14 @@ under the License.
     <div class="main-nav-container">
     
       <div id="main-navigation" class="navbar navbar-toggleable-md float-left">
-        <h2 class="navbar-toggler navbar-toggler-right text-muted" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="cursor:pointer;">${uiLabelMap.CommonApplications}</h2>
+        <h2 class="navbar-toggler navbar-toggler-right text-muted pb-2" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="cursor:pointer;">${uiLabelMap.CommonApplications}</h2>
        </div> 
        
-        <div class="collapse navbar-collapse small bg-dark pb-1 pl-1" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse small bg-dark pb-1 pl-1 mt-2 container-fluid" id="navbarSupportedContent">
           <li>
             <ul>
             <li>
-            <ul>
+            <ul class="float-left pl-3 pb-3">
             
             <#-- Primary Applications -->
             <#list displayApps as display>
@@ -68,7 +68,7 @@ under the License.
               <#if layoutSettings.suppressTab?? && display.name == layoutSettings.suppressTab>
                 <!-- do not display this component-->
               <#else>
-                  <li class="nav-item list-unstyled float-left ml-1 mt-1" style="border: 1px solid #868e96" <#if selected>class="selected"</#if>><a class="nav-link text-muted" href="${thisURL + externalKeyParam}" <#if uiLabelMap??> title="${uiLabelMap[display.description]}">${uiLabelMap[display.title]}<#else> title="${display.description}">${display.title}</#if></a></li>
+                  <li class="nav-item list-unstyled" <#if selected>class="selected"</#if>><a class="text-muted" href="${thisURL + externalKeyParam}" <#if uiLabelMap??> title="${uiLabelMap[display.description]}">${uiLabelMap[display.title]}<#else> title="${display.description}">${display.title}</#if></a></li>
               </#if>
             </#list>
            </ul>
@@ -76,7 +76,7 @@ under the License.
            
            
            <li>
-           <ul>
+           <ul class="float-left pl-4">
            
            
             <#-- Secondary Applications -->
@@ -94,7 +94,7 @@ under the License.
               <#if layoutSettings.suppressTab?? && display.name == layoutSettings.suppressTab>
                 <!-- do not display this component-->
               <#else>
-                <li class="nav-item list-unstyled float-left ml-1 mt-1" style="border: 1px solid #868e96" <#if selected>class="selected"</#if>><a class="nav-link text-muted" href="${thisURL + externalKeyParam}" <#if uiLabelMap??> title="${uiLabelMap[display.description]}">${uiLabelMap[display.title]}<#else> title="${display.description}">${display.title}</#if></a></li>
+                <li class="nav-item list-unstyled" <#if selected>class="selected"</#if>><a class="text-muted" href="${thisURL + externalKeyParam}" <#if uiLabelMap??> title="${uiLabelMap[display.description]}">${uiLabelMap[display.title]}<#else> title="${display.description}">${display.title}</#if></a></li>
               </#if>
             </#list>
             </ul>

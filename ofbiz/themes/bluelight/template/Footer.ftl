@@ -57,12 +57,15 @@ jQuery(".smallSubmit").addClass("btn btn-success");
 jQuery("input[type='submit']").addClass("btn btn-primary");
 jQuery(".nav-pager ul").addClass("pagination");
 jQuery(".nav-pager ul li").addClass("page-link");
-jQuery(".button-bar.tab-bar ul li ul").addClass("nav btn-group");
+
+<#-- jQuery(".button-bar.tab-bar ul li ul").addClass("nav btn-group");
 jQuery(".button-bar.tab-bar ul li ul li").addClass("nav-item  btn btn-outline-secondary  btn-sm");
 jQuery(".button-bar.tab-bar ul li ul li a").addClass("nav-link");
-jQuery("#column-container").addClass("clearfix");
 jQuery("div.button-bar.button-style-2").addClass("mb-4 container-fluid");
 jQuery("div.button-bar.button-style-2 a").addClass("text-primary btn btn-outline-info");
+-->
+
+jQuery("#column-container").addClass("clearfix");
 jQuery("#uploadPartyContent>*").addClass("mb-1 mt-1");
 jQuery("input[type='text']").addClass("form-control");
 jQuery("select").addClass("custom-select");

@@ -20,7 +20,7 @@ under the License.
 <#assign username = requestParameters.USERNAME?default((sessionAttributes.autoUserLogin.userLoginId)?default(""))>
 <#assign tenantId = requestParameters.userTenantId!>
 
-<center class="d-flex justify-content-center">
+<center class="d-flex justify-content-center" style="margin-top: 10%;">
 <div class="screenlet login-screenlet">
 <#assign forgotPwdFlag = parameters.forgotPwdFlag?has_content />
 <div class="login-screenlet">

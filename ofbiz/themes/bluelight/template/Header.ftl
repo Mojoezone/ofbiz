@@ -179,7 +179,7 @@ under the License.
         </#if>
         
         <li class="col-11 list-unstyled list-inline-item small">
-          <ul id="preferences-menu" class="list-inline-item float-right small">
+          <ul id="preferences-menu" class="list-inline-item float-right">
             <#if userLogin??>
               <#if userLogin.partyId??>
                 <#assign size = companyListSize?default(0)>

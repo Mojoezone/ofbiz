@@ -190,33 +190,33 @@
 
     <menu name="EmployeeProfileTabBar" extends="CommonTabBarMenu" extends-resource="component://common/widget/CommonMenus.xml"
           default-menu-item-name="EditEmployeeSkills">
-        <menu-item name="EmployeeProfile" title="${uiLabelMap.PartyProfile}">
-            <link target="EmployeeProfile">
+        <menu-item name="EmployeeProfile" title="${uiLabelMap.PartyProfile}" widget-style="d-inline-block btn btn-secondary">
+            <link style="text-dark" target="EmployeeProfile">
                 <parameter param-name="partyId"/>
             </link>
         </menu-item>
-        <menu-item name="ListEmployment" title="${uiLabelMap.HumanResEmployment}">
-            <link target="ListEmployments">
+        <menu-item name="ListEmployment" title="${uiLabelMap.HumanResEmployment}" widget-style="d-inline-block btn btn-secondary">
+            <link style="text-dark" target="ListEmployments">
                 <parameter param-name="partyId" from-field="parameters.partyId"/>
             </link>
         </menu-item>
-        <menu-item name="ListEmplPositions" title="${uiLabelMap.HumanResEmployeePosition}">
-            <link target="ListEmplPositions">
+        <menu-item name="ListEmplPositions" title="${uiLabelMap.HumanResEmployeePosition}" widget-style="d-inline-block btn btn-secondary">
+            <link style="text-dark" target="ListEmplPositions">
                 <parameter param-name="partyId" from-field="parameters.partyId"/>
             </link>
         </menu-item>
-        <menu-item name="EditEmployeeSkills" title="${uiLabelMap.HumanResSkills}">
-            <link target="EditEmployeeSkills">
+        <menu-item name="EditEmployeeSkills" title="${uiLabelMap.HumanResSkills}" widget-style="d-inline-block btn btn-secondary">
+            <link style="text-dark" target="EditEmployeeSkills">
                 <parameter param-name="partyId"/>
             </link>
         </menu-item>
-        <menu-item name="EditEmployeeQuals" title="${uiLabelMap.HumanResPartyQualification}">
-            <link target="EditEmployeeQuals">
+        <menu-item name="EditEmployeeQuals" title="${uiLabelMap.HumanResPartyQualification}" widget-style="d-inline-block btn btn-secondary">
+            <link style="text-dark" target="EditEmployeeQuals">
                 <parameter param-name="partyId"/>
             </link>
         </menu-item>
-        <menu-item name="EditEmployeeTrainings" title="${uiLabelMap.HumanResTraining}">
-            <link target="EditEmployeeTrainings">
+        <menu-item name="EditEmployeeTrainings" title="${uiLabelMap.HumanResTraining}" widget-style="d-inline-block btn btn-secondary">
+            <link style="text-dark" target="EditEmployeeTrainings">
                 <parameter param-name="partyId"/>
             </link>
         </menu-item>
@@ -236,13 +236,13 @@
                 <parameter param-name="partyId"/>
             </link>
         </menu-item> -->
-        <menu-item name="EditEmployeeLeaves" title="${uiLabelMap.HumanResEmplLeave}">
-            <link target="EditEmployeeLeaves">
+        <menu-item name="EditEmployeeLeaves" title="${uiLabelMap.HumanResEmplLeave}" widget-style="d-inline-block btn btn-secondary">
+            <link style="text-dark" target="EditEmployeeLeaves">
                 <parameter param-name="partyId"/>
             </link>
         </menu-item>
-        <menu-item name="PayrollHistory" title="${uiLabelMap.HumanResPayRollHistory}">
-            <link target="PayrollHistory">
+        <menu-item name="PayrollHistory" title="${uiLabelMap.HumanResPayRollHistory}" widget-style="d-inline-block btn btn-secondary">
+            <link style="text-dark" target="PayrollHistory">
                 <parameter param-name="partyId"/>
             </link>
         </menu-item>
