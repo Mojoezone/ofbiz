@@ -50,10 +50,11 @@ under the License.
 </#if>
 <script>
 
-jQuery("table").addClass("table table-responsive table-striped");
+<#-- jQuery("table").addClass("table table-responsive table-striped"); 
 jQuery("table thead").addClass("table-inverse small");
 jQuery("table th").addClass("table-inverse");
-jQuery(".smallSubmit").addClass("btn btn-success");
+-->
+ jQuery(".smallSubmit").addClass("btn btn-success");
 jQuery("input[type='submit']").addClass("btn btn-primary");
 jQuery(".nav-pager ul").addClass("pagination");
 jQuery(".nav-pager ul li").addClass("page-link");

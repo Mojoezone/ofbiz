@@ -158,7 +158,7 @@ under the License.
           </#if>
           <#if headerImageUrl??>
                 <#if organizationLogoLinkURL?has_content>
-                    <li class="pt-2"><a href="<@ofbizUrl>${logoLinkURL}</@ofbizUrl>"><img alt="${layoutSettings.companyName}" src="<@ofbizContentUrl>${StringUtil.wrapString(organizationLogoLinkURL)}</@ofbizContentUrl>"></a></li>
+                    <li class="col-1 list-unstyled mt-2"><a href="<@ofbizUrl>${logoLinkURL}</@ofbizUrl>"><img class="img-thumbnail border-0" style="background-color:transparent" alt="${layoutSettings.companyName}" src="<@ofbizContentUrl>${StringUtil.wrapString(organizationLogoLinkURL)}</@ofbizContentUrl>"></a></li>
                     <#else>
                     <li class="col-1 list-unstyled mt-2"><a href="<@ofbizUrl>${logoLinkURL}</@ofbizUrl>"><img  class="img-thumbnail border-0" style="background-color:transparent" alt="${layoutSettings.companyName}" src="<@ofbizContentUrl>${StringUtil.wrapString(headerImageUrl)}</@ofbizContentUrl>"/></a></li>
                 </#if>

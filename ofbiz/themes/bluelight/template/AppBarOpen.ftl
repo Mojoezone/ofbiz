@@ -47,7 +47,7 @@ under the License.
         <h2 class="navbar-toggler navbar-toggler-right text-muted pb-2" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="cursor:pointer;">${uiLabelMap.CommonApplications}</h2>
        </div> 
        
-        <div class="collapse navbar-collapse small bg-dark pb-1 pl-1 mt-2 container-fluid" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse small bg-dark pb-1 pl-1 mt-2" id="navbarSupportedContent">
           <li>
             <ul>
             <li>

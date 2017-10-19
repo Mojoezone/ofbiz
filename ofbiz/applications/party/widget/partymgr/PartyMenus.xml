@@ -318,7 +318,7 @@
 
     <menu name="GroupUpdate">
         <menu-item name="update" title="${uiLabelMap.CommonUpdate}">
-            <link target="editpartygroup">
+            <link target="editpartygroup" style="btn btn-success">
                 <parameter param-name="partyId" from-field="party.partyId"/>
             </link>
         </menu-item>

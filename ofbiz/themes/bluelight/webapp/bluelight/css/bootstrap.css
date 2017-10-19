@@ -8204,9 +8204,10 @@ li{
     border-radius: 0;
 }
 #main-navigation h2:hover, #app-navigation h2:hover{
-    color: #000 !important;
+    color: #FFF !important;
 }
-#navbarSupportedContent{   
+#navbarSupportedContent{
+    width: 22em;
     position: absolute;
     top:3em;
     z-index: 99999;
@@ -8237,7 +8238,7 @@ li{
     position: absolute;
     top: 3.5em;
     font-size: .9em;
-    padding: 0 0 .5em .5em;
+    padding: 0 0 .5em 1em;
     background-color: #343a40;
      z-index: 99999;
 }
@@ -8275,4 +8276,14 @@ li.expanded a, li.collapsed a{
 }
 .screenlet-title-bar li.expanded,.screenlet-title-bar li.collapsed{
     font-size: 2em;
+}
+
+/* add bg color transparent class */
+.bg-tran{
+    background-color: transparent;
+}
+
+/* image class shrink the thumnail to 15% */
+.img-thumbnail-small{
+    width: 15%;
 }

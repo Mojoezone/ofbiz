@@ -16,10 +16,10 @@ KIND, either express or implied.  See the License for the
 specific language governing permissions and limitations
 under the License.
 -->
-<div>
-<table>
+<div class="container-fluid">
+<table class="container-fluid table">
   <tr>
-     <td colspan="3"><h1>${uiLabelMap.AccountingAgreements}</h1></td>
+     <td colspan="3"><h5>${uiLabelMap.AccountingAgreements}</h1></td>
   </tr>
 
   <tr>
@@ -31,7 +31,7 @@ under the License.
      </td>
   </tr>
   <tr>
-     <td colspan="3"><h1 class="h1">${uiLabelMap.AccountingBillingMenu}</h1></td>
+     <td colspan="3"><h1 class="h5">${uiLabelMap.AccountingBillingMenu}</h1></td>
   </tr>
 
   <tr>
@@ -44,7 +44,7 @@ under the License.
   </tr>
 
   <tr>
-     <td colspan="3"><h1 class="h1">${uiLabelMap.AccountingFixedAssets}</h1></td>
+     <td colspan="3"><h1 class="h5">${uiLabelMap.AccountingFixedAssets}</h1></td>
   </tr>
 
   <tr>
@@ -57,7 +57,7 @@ under the License.
   </tr>
 
   <tr>
-     <td colspan="3"><h1 class="h1">${uiLabelMap.AccountingInvoicesMenu}</h1></td>
+     <td colspan="3"><h1 class="h5">${uiLabelMap.AccountingInvoicesMenu}</h1></td>
   </tr>
 
   <tr valign="top">
@@ -84,7 +84,7 @@ under the License.
 </tr>
 
   <tr>
-     <td colspan="3"><h1 class="h1">${uiLabelMap.AccountingPaymentsMenu}</h1></td>
+     <td colspan="3"><h1 class="h5">${uiLabelMap.AccountingPaymentsMenu}</h1></td>
   </tr>
 
 <tr valign="top">

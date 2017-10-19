@@ -17,12 +17,12 @@ specific language governing permissions and limitations
 under the License.
 -->
 
-  <div id="partyUserLogins" class="screenlet">
+  <div id="partyUserLogins" class="screenlet mb-5">
     <div class="screenlet-title-bar">
       <ul>
-        <li class="h3">${uiLabelMap.PartyUserName}</li>
+        <li class="h5">${uiLabelMap.PartyUserName}</li>
         <#if security.hasEntityPermission("PARTYMGR", "_CREATE", session)>
-          <li><a href="<@ofbizUrl>ProfileCreateNewLogin?partyId=${party.partyId}</@ofbizUrl>">${uiLabelMap.CommonCreateNew}</a></li>
+          <li class="btn btn-info"><a class="text-white" href="<@ofbizUrl>ProfileCreateNewLogin?partyId=${party.partyId}</@ofbizUrl>">${uiLabelMap.CommonCreateNew}</a></li>
         </#if>
       </ul>
       <br class="clear" />
