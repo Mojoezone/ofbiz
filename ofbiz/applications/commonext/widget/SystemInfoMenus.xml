@@ -20,7 +20,7 @@
 
 <menus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ofbiz.apache.org/Widget-Menu" xsi:schemaLocation="http://ofbiz.apache.org/Widget-Menu http://ofbiz.apache.org/dtds/widget-menu.xsd">
 
-    <menu name="SystemInfoNotes">
+    <menu name="SystemInfoNotes" menu-container-style="mt-4">
         <menu-item widget-style="btn btn-danger float-left" name="deleteAll" title="${uiLabelMap.CommonDeleteAll}">
             <link style="text-muted" target="deleteAllSystemNotes"/>
         </menu-item>

@@ -293,7 +293,7 @@ under the License.
                     </html>
                 </platform-specific>
                 <!-- render content area -->
-                <container style="contentarea">
+                <container style="contentarea container-fluid d-flex justify-content-center">
                     <decorator-section-include name="pre-body" />
                     <container id="column-container">
                         <section>
