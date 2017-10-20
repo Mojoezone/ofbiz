@@ -73,7 +73,7 @@ under the License.
         </#if>
         <tr>
           <td colspan="2" align="center">
-            <input type="submit" value="${uiLabelMap.CommonSubmit}"/>
+            <input class="btn btn-secondary" type="submit" value="${uiLabelMap.CommonSubmit}"/>
           </td>
         </tr>
       </table>

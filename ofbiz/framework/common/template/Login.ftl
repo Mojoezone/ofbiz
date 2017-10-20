@@ -36,11 +36,11 @@ under the License.
       <form method="post" action="<@ofbizUrl>login</@ofbizUrl>" name="loginform">
         <table class="basic-table mb-0" cellspacing="0" style="border-collapse:collapse; border: none;">
           <tr style="background-color: transparent;">
-            <td class="label mr-2 mb-1"  style="border-top: none;">${uiLabelMap.CommonUsername}</td>
+            <td class="label pr-2 pb-1"  style="border-top: none;">${uiLabelMap.CommonUsername}</td>
             <td class="pt-1" style="border-top: none; padding: 0;"><input type="text" name="USERNAME" value="${username}" size="20"/></td>
           </tr>
           <tr>
-            <td class="label mr-2" style="border-top: none;">${uiLabelMap.CommonPassword}</td>
+            <td class="label pr-2" style="border-top: none;">${uiLabelMap.CommonPassword}</td>
             <td  class="pt-1" style="border-top: none; padding: 0;"><input class="form-control" type="password" name="PASSWORD" value="" size="20" /></td>
           </tr>
           <#if ("Y" == useMultitenant) >
@@ -55,7 +55,7 @@ under the License.
           </#if>
           <tr style="background-color: transparent;">
             <td colspan="2" align="center" style="border-top: none; padding: 0;">
-              <input class="rounded btn mt-2" type="submit" value="${uiLabelMap.CommonLogin}"/>
+              <input class="rounded btn btn-primary mt-2" type="submit" value="${uiLabelMap.CommonLogin}"/>
             </td>
           </tr>
         </table>

@@ -47,14 +47,14 @@ under the License.
               </tr>
             <#else>
               <tr style="background-color:transparent;">
-                <td class="label mr-2" style="border-top: none;">${uiLabelMap.CommonUsername}</td>
+                <td class="label pr-2" style="border-top: none;">${uiLabelMap.CommonUsername}</td>
                 <td class="pt-1" style="border-top: none; padding:0;"><input type="text" size="20" name="USERNAME" value="<#if requestParameters.USERNAME?has_content>${requestParameters.USERNAME}<#elseif autoUserLogin?has_content>${autoUserLogin.userLoginId}</#if>" /></td>
               </tr>
             </#if>
             <tr style="background-color:transparent;">
               <td colspan="2" align="center" style="border-top: none;">
-                <input type="submit" name="GET_PASSWORD_HINT" class="smallSubmit" value="${uiLabelMap.CommonGetPasswordHint}" />&nbsp;
-                <input type="submit" name="EMAIL_PASSWORD" class="smallSubmit" value="${uiLabelMap.CommonEmailPassword}" />
+                <input class="btn btn-secondary mt-2" type="submit" name="GET_PASSWORD_HINT" class="smallSubmit" value="${uiLabelMap.CommonGetPasswordHint}" />&nbsp;
+                <input class="btn btn-secondary mt-2" type="submit" name="EMAIL_PASSWORD" class="smallSubmit" value="${uiLabelMap.CommonEmailPassword}" />
               </td>
             </tr>
           <#else>

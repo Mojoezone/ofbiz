@@ -22,75 +22,79 @@ under the License.
     <form name="RegisterPerson" onsubmit="javascript:submitFormDisableSubmits(this)" class="basic-form" id="RegisterPerson" action="/myportal/control/createRegister" method="post">
         <input type="hidden" value="${webSiteId!}" name="webSiteId"/>
         <input type="hidden" name="reload"/>
-        <div id="_G0_" class="fieldgroup"><div class="fieldgroup-title-bar"><table><tbody><tr><td class="collapse"> </td><td> </td></tr></tbody></table></div><div class="fieldgroup-body" id="_G0__body">
-            <table cellspacing="0" class="basic-table">
+        <div id="_G0_" class="fieldgroup form-group d-flex justify-content-center">
+        <div class="fieldgroup-title-bar">
+        <table><tbody><tr><td class="collapse"> </td><td> </td></tr></tbody></table></div><div class="fieldgroup-body" id="_G0__body">
+            <table cellspacing="0" class="basic-table table">
                 <tbody>
-                    <tr>
-                        <td class="label">    Why Would You Like To Register    
-                        </td>
-                        <td><textarea id="RegisterPerson_whyWouldYouLikeToRegister" rows="5" cols="60" class="required false" name="whyWouldYouLikeToRegister"></textarea>
-                            <span class="tooltip">Required</span>    
-                        </td>
-                    </tr>
+                 
                     <tr>
                         <td class="label">    Salutation    </td>
                         <td class="no-required">
-                            <input type="text" autocomplete="off" id="RegisterPerson_salutation" maxlength="60" size="40" name="salutation" value="${requestParameters.salutation!}"/>
+                            <input class="form-control" type="text" autocomplete="off" id="RegisterPerson_salutation" maxlength="60" size="40" name="salutation" value="${requestParameters.salutation!}"/>
                         </td>
                     </tr>
                     <tr>
                         <td class="label">    First name    </td>
                         <td>
-                            <input type="text" autocomplete="off" id="RegisterPerson_firstName" maxlength="60" size="40" class="required false" name="firstName" value="${requestParameters.firstName!}"/>
+                            <input class="form-control" type="text" autocomplete="off" id="RegisterPerson_firstName" maxlength="60" size="40" class="required false" name="firstName" value="${requestParameters.firstName!}"/>
                             <span class="tooltip">Required</span>    
                         </td>
                     </tr>
                     <tr>
                         <td class="label">        Middle Name    </td>
                         <td class="no-required">
-                            <input type="text" autocomplete="off" id="RegisterPerson_middleName" maxlength="60" size="40" name="middleName" value="${requestParameters.middleName!}"/>
+                            <input class="form-control" type="text" autocomplete="off" id="RegisterPerson_middleName" maxlength="60" size="40" name="middleName" value="${requestParameters.middleName!}"/>
                         </td>
                     </tr>
                     <tr>
                         <td class="label">        Last name    </td>
                         <td>
-                            <input type="text" autocomplete="off" id="RegisterPerson_lastName" maxlength="60" size="40" class="required false" name="lastName" value="${requestParameters.lastName!}"/>
+                            <input class="form-control" type="text" autocomplete="off" id="RegisterPerson_lastName" maxlength="60" size="40" class="required false" name="lastName" value="${requestParameters.lastName!}"/>
                             <span class="tooltip">Required</span>    
                         </td>
                     </tr>
                     <tr>
                         <td class="label">    Email    </td>
                         <td>
-                            <input type="text" autocomplete="off" id="RegisterPerson_USER_EMAIL" maxlength="250" size="60" class="required false" name="USER_EMAIL" value="${requestParameters.USER_EMAIL!}"/>
+                            <input class="form-control" type="text" autocomplete="off" id="RegisterPerson_USER_EMAIL" maxlength="250" size="60" class="required false" name="USER_EMAIL" value="${requestParameters.USER_EMAIL!}"/>
                             <span class="tooltip">Required</span>    
                         </td>
                     </tr>
-                    <tr>
+                    <tr class="bg-dark text-white">
                         <td class="group-label">    User Login    </td>
                         <td> </td>
                     </tr>
                     <tr>
                         <td class="label">    Username    </td>
                         <td>
-                            <input type="text" autocomplete="off" id="RegisterPerson_USERNAME" maxlength="250" size="30" class="required false" name="USERNAME" value="${requestParameters.USERNAME!}"/>
+                            <input class="form-control" type="text" autocomplete="off" id="RegisterPerson_USERNAME" maxlength="250" size="30" class="required false" name="USERNAME" value="${requestParameters.USERNAME!}"/>
                             <span class="tooltip">Required</span>    
                         </td>
                     </tr>
                     <tr>
                         <td class="label">    Password    </td>
                         <td>
-                            <input type="password" id="RegisterPerson_PASSWORD" maxlength="250" size="15" name="PASSWORD" class="required false" value="${requestParameters.PASSWORD!}"/>
+                            <input class="form-control" type="password" id="RegisterPerson_PASSWORD" maxlength="250" size="15" name="PASSWORD" class="required false" value="${requestParameters.PASSWORD!}"/>
                             <span class="tooltip">Required</span>    
                         </td>
                     </tr>
                     <tr>
-                        <td class="label">    Password    </td>
+                        <td class="label"> Confirm    Password    </td>
                         <td>
-                            <input type="password" id="RegisterPerson_CONFIRM_PASSWORD" maxlength="250" size="15" name="CONFIRM_PASSWORD" class="required false" value="${requestParameters.CONFIRM_PASSWORD!}"/>
+                            <input class="form-control" type="password" id="RegisterPerson_CONFIRM_PASSWORD" maxlength="250" size="15" name="CONFIRM_PASSWORD" class="required false" value="${requestParameters.CONFIRM_PASSWORD!}"/>
                             <span class="tooltip">* Confirm</span>    
                         </td>
                     </tr>
-                    <tr>
+                    
+                       <tr>
+                        <td class="label">    Why Would You Like To Register    
+                        </td>
+                        <td><textarea class="form-control" id="RegisterPerson_whyWouldYouLikeToRegister" rows="5" cols="60" class="required false" name="whyWouldYouLikeToRegister" style="resize: none;"></textarea>
+                            <span class="tooltip">Required</span>    
+                        </td>
+                    </tr>
+                    <tr class="bg-dark text-white">
                         <td class="group-label">    Verify captcha code    </td>
                         <td> </td>
                     </tr>
@@ -124,7 +128,7 @@ under the License.
                     <tr>
                         <td class="group-label"> </td>
                         <td>
-                            <input type="submit" value="Save" name="submitButton"/>
+                            <input class="btn btn-primary" type="submit" value="Save" name="submitButton"/>
                         </td>
                     </tr>
                 </tbody>

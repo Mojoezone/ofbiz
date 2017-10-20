@@ -143,7 +143,7 @@ under the License.
         <#if (userPreferences.COMPACT_HEADER)?default("N") == "Y">
             <#if shortcutIcon?has_content>
                 <#if organizationLogoLinkURL?has_content>
-                    <li class="col-lg-2 list-unstyled"><a href="<@ofbizUrl>${logoLinkURL}</@ofbizUrl>"><img class="img-thumbnail" alt="${layoutSettings.companyName}" src="<@ofbizContentUrl>${StringUtil.wrapString(organizationLogoLinkURL)}</@ofbizContentUrl>" height="16px" width="16px"></a></li>
+                    <li class="col-lg-1 list-unstyled"><a href="<@ofbizUrl>${logoLinkURL}</@ofbizUrl>"><img class="img-thumbnail" alt="${layoutSettings.companyName}" src="<@ofbizContentUrl>${StringUtil.wrapString(organizationLogoLinkURL)}</@ofbizContentUrl>" height="16px" width="16px"></a></li>
                     <#else>
                     <li class="col-lg-2 list-unstyled"><a href="<@ofbizUrl>${logoLinkURL}</@ofbizUrl>"><img  class="img-thumbnail" src="<@ofbizContentUrl>${StringUtil.wrapString(shortcutIcon)}</@ofbizContentUrl>" height="16px" width="16px" alt="" /></a></li>
                 </#if>
@@ -158,7 +158,7 @@ under the License.
           </#if>
           <#if headerImageUrl??>
                 <#if organizationLogoLinkURL?has_content>
-                    <li class="col-1 list-unstyled mt-2"><a href="<@ofbizUrl>${logoLinkURL}</@ofbizUrl>"><img class="img-thumbnail border-0" style="background-color:transparent" alt="${layoutSettings.companyName}" src="<@ofbizContentUrl>${StringUtil.wrapString(organizationLogoLinkURL)}</@ofbizContentUrl>"></a></li>
+                    <li class="col-2 col-sm-2 col-md-3 col-lg-2 col-xl-1 list-unstyled mt-2"><a href="<@ofbizUrl>${logoLinkURL}</@ofbizUrl>"><img class="img-thumbnail border-0" style="background-color:transparent" alt="${layoutSettings.companyName}" src="<@ofbizContentUrl>${StringUtil.wrapString(organizationLogoLinkURL)}</@ofbizContentUrl>"></a></li>
                     <#else>
                     <li class="col-1 list-unstyled mt-2"><a href="<@ofbizUrl>${logoLinkURL}</@ofbizUrl>"><img  class="img-thumbnail border-0" style="background-color:transparent" alt="${layoutSettings.companyName}" src="<@ofbizContentUrl>${StringUtil.wrapString(headerImageUrl)}</@ofbizContentUrl>"/></a></li>
                 </#if>
@@ -178,7 +178,7 @@ under the License.
           </#if>
         </#if>
         
-        <li class="col-11 list-unstyled list-inline-item small">
+        <li class="col-sm-12 col-md-9 col-lg-10 col-xl-11 list-unstyled list-inline-item small">
           <ul id="preferences-menu" class="list-inline-item float-right">
             <#if userLogin??>
               <#if userLogin.partyId??>

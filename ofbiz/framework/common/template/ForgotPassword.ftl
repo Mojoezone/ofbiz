@@ -26,12 +26,12 @@ under the License.
       <form method="post" action="<@ofbizUrl>forgotPassword_step2</@ofbizUrl>" name="getSecurityQuestion">
         <table class="basic-table" cellspacing="0" style="border-collapse:collapse;  border: none;">
           <tr style="background-color: transparent;">
-            <td class="label mr-2" style="border-top: none;">${uiLabelMap.CommonUsername}</td>
+            <td class="label pr-2" style="border-top: none;">${uiLabelMap.CommonUsername}</td>
             <td class="pt-1" style="border-top: none; padding: 0;"><input type="text" size="20" name="USERNAME" value="<#if requestParameters.USERNAME?has_content>${requestParameters.USERNAME}<#elseif autoUserLogin?has_content>${autoUserLogin.userLoginId}</#if>"/></td>
           </tr>
           <tr>
             <td colspan="2" align="center" style="border-top: none;">
-              <input type="submit" class="smallSubmit rounded btn mt-2" value="${uiLabelMap.CommonContinue}"/>
+              <input class="btn btn-secondary mt-2" type="submit" class="smallSubmit rounded btn mt-2" value="${uiLabelMap.CommonContinue}"/>
             </td>
           </tr>
           <tr style="background-color:transparent;">

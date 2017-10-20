@@ -156,7 +156,7 @@ under the License.
 <#macro renderScreenletBegin id title collapsible saveCollapsed collapsibleAreaId expandToolTip collapseToolTip fullUrlString padded menuString showMore collapsed javaScriptEnabled>
 <div class="screenlet"<#if id?has_content> id="${id}"</#if>><#rt/>
 <#if showMore>
-<div class="screenlet-title-bar"><ul><#if title?has_content><li class="h3">${title}</li></#if>
+<div class="screenlet-title-bar"><ul><#if title?has_content><li class="h3 text-center">${title}</li></#if>
 <#if collapsible>
 <li class="<#rt/>
 <#if collapsed>

@@ -54,10 +54,10 @@ under the License.
 jQuery("table thead").addClass("table-inverse small");
 jQuery("table th").addClass("table-inverse");
 -->
- jQuery(".smallSubmit").addClass("btn btn-success");
+ <#--jQuery(".smallSubmit").addClass("btn btn-success");
 jQuery("input[type='submit']").addClass("btn btn-primary");
 jQuery(".nav-pager ul").addClass("pagination");
-jQuery(".nav-pager ul li").addClass("page-link");
+jQuery(".nav-pager ul li").addClass("page-link"); -->
 
 <#-- jQuery(".button-bar.tab-bar ul li ul").addClass("nav btn-group");
 jQuery(".button-bar.tab-bar ul li ul li").addClass("nav-item  btn btn-outline-secondary  btn-sm");

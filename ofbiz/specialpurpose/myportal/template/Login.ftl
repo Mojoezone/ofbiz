@@ -26,21 +26,21 @@ under the License.
 <#else>
   <#assign focusName = true>
 </#if>
-<center>
-  <div class="screenlet login-screenlet">
-    <div class="screenlet-title-bar">
-      <h3>${uiLabelMap.CommonRegistered}</h3>
+<center class="d-flex justify-content-center" style="margin-top: 10%;">
+  <div class="screenlet login-screenlet bg-dark p-2 text-white rounded pt-4 pr-4 pl-3 pb-4">
+    <div class="screenlet-title-bar mb-4">
+      <h3 class="h5">${uiLabelMap.CommonRegistered}</h3>
     </div>
     <div class="screenlet-body">
       <form method="post" action="<@ofbizUrl>login</@ofbizUrl>" name="loginform">
-        <table class="basic-table" cellspacing="0">
+        <table class="basic-table mb-0" cellspacing="0" style="border-collapse:collapse; border: none;">
           <tr>
-            <td class="label">${uiLabelMap.CommonUsername}</td>
+            <td class="label pr-2">${uiLabelMap.CommonUsername}</td>
             <td><input type="text" name="USERNAME" value="${username}" size="20"/></td>
           </tr>
           <tr>
-            <td class="label">${uiLabelMap.CommonPassword}</td>
-            <td><input type="password" name="PASSWORD" value="" size="20"/></td>
+            <td class="label pr-2">${uiLabelMap.CommonPassword}</td>
+            <td class="pt-1" style="border-top: none; padding: 0;"><input class="form-control" type="password" name="PASSWORD" value="" size="20"/></td>
           </tr>
           <#if ("Y" == useMultitenant) >
               <#if !requestAttributes.userTenantId??>
@@ -54,14 +54,14 @@ under the License.
           </#if>
           <tr>
             <td colspan="2" align="center">
-              <input type="submit" value="${uiLabelMap.CommonLogin}"/>
+              <input class="rounded btn btn-primary mt-2" type="submit" value="${uiLabelMap.CommonLogin}"/>
             </td>
           </tr>
         </table>
         <input type="hidden" name="JavaScriptEnabled" value="N"/>
         <br />
-        <a href="<@ofbizUrl>forgotPassword</@ofbizUrl>">${uiLabelMap.CommonForgotYourPassword}?</a>
-        <a href="<@ofbizUrl>newRegisterLogin</@ofbizUrl>">${uiLabelMap.MyPortalNewRegistration}</a>
+        <a class="text-muted mr-3 small" href="<@ofbizUrl>forgotPassword</@ofbizUrl>">${uiLabelMap.CommonForgotYourPassword}?</a>
+        <a class="text-primary small" href="<@ofbizUrl>newRegisterLogin</@ofbizUrl>">${uiLabelMap.MyPortalNewRegistration}</a>
       </form>
     </div>
   </div>

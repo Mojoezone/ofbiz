@@ -21,14 +21,14 @@
 <menus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ofbiz.apache.org/Widget-Menu" xsi:schemaLocation="http://ofbiz.apache.org/Widget-Menu http://ofbiz.apache.org/dtds/widget-menu.xsd">
 
     <menu name="SystemInfoNotes">
-        <menu-item name="deleteAll" title="${uiLabelMap.CommonDeleteAll}">
-            <link target="deleteAllSystemNotes"/>
+        <menu-item widget-style="btn btn-danger float-left" name="deleteAll" title="${uiLabelMap.CommonDeleteAll}">
+            <link style="text-muted" target="deleteAllSystemNotes"/>
         </menu-item>
-        <menu-item name="createPublicMsg" title="${uiLabelMap.CommonExtCreatePublicMessage}">
+        <menu-item widget-style="btn btn-primary ml-2" name="createPublicMsg" title="${uiLabelMap.CommonExtCreatePublicMessage}">
             <condition>
                 <if-has-permission permission="COMMONEXT_PUBLMSG"/>
             </condition>
-            <link target="${parameters._LAST_VIEW_NAME_}">
+            <link style="text-white" target="${parameters._LAST_VIEW_NAME_}">
                 <parameter param-name="portalPageId" from-field="parameters.portalPageId"/>
                 <parameter param-name="createPublicMsg" value="true"/>
             </link>
