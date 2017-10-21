@@ -48,7 +48,7 @@ under the License.
             <#else>
               <tr style="background-color:transparent;">
                 <td class="label pr-2" style="border-top: none;">${uiLabelMap.CommonUsername}</td>
-                <td class="pt-1" style="border-top: none; padding:0;"><input type="text" size="20" name="USERNAME" value="<#if requestParameters.USERNAME?has_content>${requestParameters.USERNAME}<#elseif autoUserLogin?has_content>${autoUserLogin.userLoginId}</#if>" /></td>
+                <td class="pt-1" style="border-top: none; padding:0;"><input class="form-control" type="text" size="20" name="USERNAME" value="<#if requestParameters.USERNAME?has_content>${requestParameters.USERNAME}<#elseif autoUserLogin?has_content>${autoUserLogin.userLoginId}</#if>" /></td>
               </tr>
             </#if>
             <tr style="background-color:transparent;">

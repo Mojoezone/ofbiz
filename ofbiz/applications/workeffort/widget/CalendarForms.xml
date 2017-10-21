@@ -89,7 +89,7 @@ under the License.
         <field name="workEffortName" title="${uiLabelMap.WorkEffortEventName}"><text /></field>
         <field name="description" title="${uiLabelMap.CommonDescription}"><text /></field>
         <!-- This is wrong. A calendar item work effort type is an EVENT. "Meeting" is a work effort purpose. -->
-        <field name="workEffortTypeId" use-when="parentTypeId!=void" title="${uiLabelMap.PartyEventType}">
+        <field widget-style="form-control" name="workEffortTypeId" use-when="parentTypeId!=void" title="${uiLabelMap.PartyEventType}">
             <drop-down no-current-selected-key="MEETING">
                 <entity-options entity-name="WorkEffortType">
                     <entity-constraint name="parentTypeId" env-name="parentTypeId" />
@@ -119,8 +119,8 @@ under the License.
                 </entity-options>
             </drop-down>
         </field>
-        <field name="estimatedStartDate"><date-time input-method="time-dropdown" /></field>
-        <field name="estimatedCompletionDate"><date-time input-method="time-dropdown" /></field>
+        <field widget-style="mb-1" name="estimatedStartDate"><date-time input-method="time-dropdown" /></field>
+        <field widget-style="mb-1" name="estimatedCompletionDate"><date-time input-method="time-dropdown" /></field>
         <field name="actualStartDate" use-when="workEffort!=null"><date-time input-method="time-dropdown" /></field>
         <field name="actualCompletionDate" use-when="workEffort!=null"><date-time input-method="time-dropdown" /></field>
         <field widget-style="btn btn-primary" name="addButton" use-when="workEffort==null"><submit /></field>

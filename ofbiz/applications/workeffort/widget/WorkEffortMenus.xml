@@ -145,8 +145,8 @@ under the License.
             </link>
         </menu-item>
     </menu>
-    <menu name="Day" extends="Calendar">
-        <menu-item name="next">
+    <menu menu-container-style="list-group" name="Day" extends="Calendar">
+        <menu-item widget-style="list-group-item" name="next">
             <link target="${parameters._LAST_VIEW_NAME_}" text="${uiLabelMap.WorkEffortNextDay}">
                 <parameter param-name="period" value="day"/>
                 <parameter param-name="startTime" value="${nextMillis}"/>
@@ -158,7 +158,7 @@ under the License.
                 <parameter param-name="hideEvents" from-field="parameters.hideEvents"/>
             </link>
         </menu-item>
-        <menu-item name="toDay">
+        <menu-item widget-style="list-group-item" name="toDay">
             <link target="${parameters._LAST_VIEW_NAME_}" text="${uiLabelMap.CommonToday}">
                 <parameter param-name="period" value="day"/>
                 <parameter param-name="partyId" from-field="parameters.partyId"/>
@@ -169,7 +169,7 @@ under the License.
                 <parameter param-name="hideEvents" from-field="parameters.hideEvents"/>
             </link>
         </menu-item>
-        <menu-item name="prev">
+        <menu-item widget-style="list-group-item" name="prev">
             <link target="${parameters._LAST_VIEW_NAME_}" text="${uiLabelMap.WorkEffortPreviousDay}">
                 <parameter param-name="period" value="day"/>
                 <parameter param-name="startTime" value="${prevMillis}"/>
@@ -182,8 +182,8 @@ under the License.
             </link>
         </menu-item>
     </menu>
-    <menu name="Week" extends="Calendar">
-        <menu-item name="next">
+    <menu menu-container-style="list-group" name="Week" extends="Calendar">
+        <menu-item widget-style="list-group-item" name="next">
             <link target="${parameters._LAST_VIEW_NAME_}" text="${uiLabelMap.WorkEffortNextWeek}">
                 <parameter param-name="period" value="week"/>
                 <parameter param-name="startTime" value="${nextMillis}"/>
@@ -195,7 +195,7 @@ under the License.
                 <parameter param-name="hideEvents" from-field="parameters.hideEvents"/>
             </link>
         </menu-item>
-        <menu-item name="thisWeek">
+        <menu-item widget-style="list-group-item" name="thisWeek">
             <link target="${parameters._LAST_VIEW_NAME_}" text="${uiLabelMap.WorkEffortThisWeek}">
                 <parameter param-name="period" value="week"/>
                 <parameter param-name="partyId" from-field="parameters.partyId"/>
@@ -206,7 +206,7 @@ under the License.
                 <parameter param-name="hideEvents" from-field="parameters.hideEvents"/>
             </link>
         </menu-item>
-        <menu-item name="prev">
+        <menu-item widget-style="list-group-item" name="prev">
             <link target="${parameters._LAST_VIEW_NAME_}" text="${uiLabelMap.WorkEffortPreviousWeek}">
                 <parameter param-name="period" value="week"/>
                 <parameter param-name="startTime" value="${prevMillis}"/>
@@ -219,8 +219,8 @@ under the License.
             </link>
         </menu-item>
     </menu>
-    <menu name="Month" extends="Calendar">
-        <menu-item name="next">
+    <menu menu-container-style="list-group" name="Month" extends="Calendar">
+        <menu-item widget-style="list-group-item" name="next">
             <link target="${parameters._LAST_VIEW_NAME_}" text="${uiLabelMap.WorkEffortNextMonth}">
                 <parameter param-name="period" value="month"/>
                 <parameter param-name="startTime" value="${nextMillis}"/>
@@ -232,7 +232,7 @@ under the License.
                 <parameter param-name="hideEvents" from-field="parameters.hideEvents"/>
             </link>
         </menu-item>
-        <menu-item name="thisMonth">
+        <menu-item widget-style="list-group-item" name="thisMonth">
             <link target="${parameters._LAST_VIEW_NAME_}" text="${uiLabelMap.WorkEffortThisMonth}">
                 <parameter param-name="period" value="month"/>
                 <parameter param-name="partyId" from-field="parameters.partyId"/>
@@ -243,7 +243,7 @@ under the License.
                 <parameter param-name="hideEvents" from-field="parameters.hideEvents"/>
             </link>
         </menu-item>
-        <menu-item name="prev">
+        <menu-item widget-style="list-group-item" name="prev">
             <link target="${parameters._LAST_VIEW_NAME_}" text="${uiLabelMap.WorkEffortPreviousMonth}">
                 <parameter param-name="period" value="month"/>
                 <parameter param-name="startTime" value="${prevMillis}"/>

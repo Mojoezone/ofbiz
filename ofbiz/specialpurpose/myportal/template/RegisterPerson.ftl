@@ -22,7 +22,7 @@ under the License.
     <form name="RegisterPerson" onsubmit="javascript:submitFormDisableSubmits(this)" class="basic-form" id="RegisterPerson" action="/myportal/control/createRegister" method="post">
         <input type="hidden" value="${webSiteId!}" name="webSiteId"/>
         <input type="hidden" name="reload"/>
-        <div id="_G0_" class="fieldgroup form-group d-flex justify-content-center">
+        <div id="_G0_" class="fieldgroup form-group">
         <div class="fieldgroup-title-bar">
         <table><tbody><tr><td class="collapse"> </td><td> </td></tr></tbody></table></div><div class="fieldgroup-body" id="_G0__body">
             <table cellspacing="0" class="basic-table table">

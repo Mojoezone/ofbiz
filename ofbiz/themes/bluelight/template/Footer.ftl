@@ -20,19 +20,19 @@ under the License.
 <div id="footer" class="clearfix bg-dark footer container-fluid mt-5 pt-4 pb-2">
 
     <ul class="row text-center">
-        <li class="first list-unstyled col-12">${nowTimestamp?datetime?string.short} - <a href="<@ofbizUrl>ListTimezones</@ofbizUrl>">${timeZone.getDisplayName(timeZone.useDaylightTime(), Static["java.util.TimeZone"].LONG, locale)}</a></li>
-        <li class=" list-unstyled col-12"><a href="<@ofbizUrl>ListLocales</@ofbizUrl>">${locale.getDisplayName(locale)}</a></li>
-        <li class="last list-unstyled col-12"><a href="<@ofbizUrl>ListVisualThemes</@ofbizUrl>">${uiLabelMap.CommonVisualThemes}</a></li>
+        <li class="first list-unstyled col-12 text-muted">${nowTimestamp?datetime?string.short} - <a class="text-muted" href="<@ofbizUrl>ListTimezones</@ofbizUrl>">${timeZone.getDisplayName(timeZone.useDaylightTime(), Static["java.util.TimeZone"].LONG, locale)}</a></li>
+        <li class=" list-unstyled col-12 text-muted"><a class="text-muted" href="<@ofbizUrl>ListLocales</@ofbizUrl>">${locale.getDisplayName(locale)}</a></li>
+        <li class="last list-unstyled col-12 text-muted"><a class="text-muted" href="<@ofbizUrl>ListVisualThemes</@ofbizUrl>">${uiLabelMap.CommonVisualThemes}</a></li>
     </ul>
   
     <div>
     <p class="row text-center">
-    <span class="footerTextColour col-12 small">${uiLabelMap.CommonPoweredBy} 
-        <a  class="small" href="http://ofbiz.apache.org" class="noicon">OFBiz </a>
+    <span class="footerTextColour col-12 small text-muted">${uiLabelMap.CommonPoweredBy} 
+        <a class="small text-muted" href="http://ofbiz.apache.org" class="noicon">OFBiz </a>
     </span>
-    <span class="footerTextColour col-12 small">Copyright 2001-${nowTimestamp?string("yyyy")} 
-        <a class="small" href="http://www.apache.org" class="noicon">The Apache Software Foundation - www.apache.org</a></span> 
-        <span class="footerTextColour col-12">
+    <span class="footerTextColour col-12 small text-muted">Copyright 2001-${nowTimestamp?string("yyyy")} 
+        <a class="text-muted" href="http://www.apache.org" class="noicon">The Apache Software Foundation - www.apache.org</a></span> 
+        <span class="footerTextColour col-12 text-muted">
             <#include "ofbizhome://runtime/SvnInfo.ftl" ignore_missing=true/>
             <#include "ofbizhome://runtime/GitInfo.ftl" ignore_missing=true/>
         </span>
@@ -66,10 +66,11 @@ jQuery("div.button-bar.button-style-2").addClass("mb-4 container-fluid");
 jQuery("div.button-bar.button-style-2 a").addClass("text-primary btn btn-outline-info");
 -->
 
-jQuery("#column-container").addClass("clearfix");
+<#-- jQuery("#column-container").addClass("clearfix");
 jQuery("#uploadPartyContent>*").addClass("mb-1 mt-1");
 jQuery("input[type='text']").addClass("form-control");
-jQuery("select").addClass("custom-select");
+jQuery("select").addClass("custom-select"); 
+-->
 </script>
 
 </body>

@@ -335,7 +335,7 @@
         </menu-item>
     </menu>
     <menu name="CommunicationsMenu">
-        <menu-item name="newEmail" title="${uiLabelMap.PartyNewEmail}">
+        <menu-item widget-style="btn btn-outline-secondary" name="newEmail" title="${uiLabelMap.PartyNewEmail}">
             <condition>
                 <if-has-permission permission="PARTYMGR_CME-EMAIL_CREATE"/>
             </condition>
@@ -348,7 +348,7 @@
                 <parameter param-name="portalPageId" from-field="parameters.portalPageId"/>
             </link>
         </menu-item>
-        <menu-item name="newNote" title="${uiLabelMap.PartyNewInternalNote}">
+        <menu-item widget-style="btn btn-outline-secondary" name="newNote" title="${uiLabelMap.PartyNewInternalNote}">
             <condition>
                 <if-has-permission permission="PARTYMGR_CME-NOTE_CREATE"/>
             </condition>
@@ -370,7 +370,7 @@
                 <parameter param-name="all" value="false"/>
             </link>
         </menu-item>
-        <menu-item name="allOtherEvents" title="${uiLabelMap.PartyAllEvents}">
+        <menu-item widget-style="btn btn-outline-secondary" name="allOtherEvents" title="${uiLabelMap.PartyAllEvents}">
             <condition>
                 <or>
                     <if-compare field="parameters.all" operator="equals" value="false"/>

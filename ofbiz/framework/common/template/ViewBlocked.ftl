@@ -17,7 +17,7 @@ specific language governing permissions and limitations
 under the License.
 -->
 
-<center>
+<center class="d-flex justify-content-center" style="margin-top: 30%;">
   <div class="screenlet login-screenlet">
     <div class="screenlet-title-bar">
       <h3>${uiLabelMap.CommonViewBlocked}</h3>
