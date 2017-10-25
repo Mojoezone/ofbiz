@@ -1050,7 +1050,7 @@ under the License.
                         <not><if-empty field="commEventsUnknown"/></not>
                     </condition>
                     <widgets>
-                        <label style="h2" text="${uiLabelMap.PartyEmailsFromUnknownOrigin}"/>
+                        <label style="h4" text="${uiLabelMap.PartyEmailsFromUnknownOrigin}"/>
                         <include-form name="ListMyUnknownPartyEmails" location="component://party/widget/partymgr/CommunicationEventForms.xml"/>
                     </widgets>
                 </section>
@@ -1060,7 +1060,7 @@ under the License.
                         <not><if-empty field="commEventDraft"/></not>
                     </condition>
                     <widgets>
-                        <label style="h2" text="${uiLabelMap.PartyDraftEmails}"/>
+                        <label style="h4 pt-5" text="${uiLabelMap.PartyDraftEmails}"/>
                         <include-form name="ListDraftEmails" location="component://party/widget/partymgr/CommunicationEventForms.xml"/>
                     </widgets>
                 </section>

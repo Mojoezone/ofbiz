@@ -220,7 +220,7 @@ under the License.
     </form>
 
     <form name="ListEmplTrainings" type="list" list-name="listIt" separate-columns="true" target="updateEmplLeave" paginate-target="FindEmplLeaves"
-        odd-row-style="alternate-row" header-row-style="header-row-2" default-table-style="basic-table hover-bar">
+        odd-row-style="alternate-row" header-row-style="header-row-2 bg-dark text-white" default-table-style="basic-table hover-bar table table-striped small">
         <actions>
             <entity-condition entity-name="PersonTraining">
                 <condition-expr field-name="partyId" from-field="partyId"/>

@@ -18,19 +18,19 @@ under the License.
 -->
 
   <div id="partyContactInfo" class="screenlet">
-    <div class="screenlet-title-bar">
+    <div class="screenlet-title-bar mt-5">
       <ul>
-        <li class="h3">${uiLabelMap.PartyContactInformation}</li>
+        <li class="h4">${uiLabelMap.PartyContactInformation}</li>
         <#if security.hasEntityPermission("PARTYMGR", "_CREATE", session) || userLogin.partyId == partyId>
-          <li><a href="<@ofbizUrl>editcontactmech?partyId=${partyId}</@ofbizUrl>">${uiLabelMap.CommonCreateNew}</a></li>
+          <li class="btn btn-info"><a class="text-white" href="<@ofbizUrl>editcontactmech?partyId=${partyId}</@ofbizUrl>">${uiLabelMap.CommonCreateNew}</a></li>
         </#if>
       </ul>
       <br class="clear" />
     </div>
     <div class="screenlet-body">
       <#if contactMeches?has_content>
-        <table class="basic-table" cellspacing="0">
-          <tr>
+        <table class="basic-table table small bg-light" cellspacing="0">
+          <tr class="bg-dark text-white">
             <th>${uiLabelMap.PartyContactType}</th>
             <th>${uiLabelMap.PartyContactInformation}</th>
             <th>${uiLabelMap.PartyContactSolicitingOk}</th>

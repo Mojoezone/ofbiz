@@ -224,7 +224,7 @@
         <field name="actualHours" title="${uiLabelMap.ProjectMgrActualHours}"><display/></field>
     </form>
     <form name="MyTasks" type="list" list-name="tasks" paginate-target="MyTasks" target="updateTaskAssigment"
-        odd-row-style="alternate-row" default-table-style="basic-table hover-bar">
+        odd-row-style="alternate-row" header-row-style="bg-dark text-white" default-table-style="basic-table hover-bar table small">
         <row-actions>
             <service service-name="getProjectTask" result-map="result">
                 <field-map field-name="taskId" from-field="workEffortId"/>
@@ -259,7 +259,7 @@
         <field entry-name="result.taskInfo.plannedHours" name="plannedHours" title="${uiLabelMap.ProjectMgrPlannedHours}"><display/></field>
         <field entry-name="result.taskInfo.actualHours" name="actualHours" title="${uiLabelMap.ProjectMgrActualHours}"><display/></field>
         <field name="statusId" title="${uiLabelMap.CommonStatus}"><display-entity entity-name="StatusItem"/></field>
-        <field name="partyId" parameter-name="newPartyId">
+        <field widget-style="rounded" name="partyId" parameter-name="newPartyId">
             <drop-down>
                 <entity-options entity-name="PartyDetailAndWorkEffortAssign" description="${firstName} ${middleName} ${lastName} ${groupName}">
                     <entity-constraint name="workEffortId" env-name="resultProject.projectId"/>
@@ -267,7 +267,7 @@
                 </entity-options>
             </drop-down>
         </field>
-        <field name="roleTypeId" parameter-name="newRoleTypeId" title="${uiLabelMap.PartyRole}">
+        <field widget-style="rounded mt-1" name="roleTypeId" parameter-name="newRoleTypeId" title="${uiLabelMap.PartyRole}">
             <drop-down>
                 <entity-options entity-name="RoleType">
                     <entity-constraint name="parentTypeId" value="PROJECT_TEAM"/>
@@ -277,7 +277,7 @@
         </field>
         <field name="workEffortId"><hidden/></field>
         <field name="fromDate"><hidden/></field>
-        <field name="updateButton"><submit/></field>
+        <field widget-style="btn btn-success mt-2" name="updateButton"><submit/></field>
         <field name="remove" title="${uiLabelMap.CommonRemove}">
         <hyperlink description="${uiLabelMap.CommonRemove}" target="updateTaskAssigment">
                 <parameter param-name="workEffortId"/>

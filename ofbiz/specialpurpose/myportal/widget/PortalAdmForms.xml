@@ -21,7 +21,7 @@ under the License.
 <forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
         xmlns="http://ofbiz.apache.org/Widget-Form" xsi:schemaLocation="http://ofbiz.apache.org/Widget-Form http://ofbiz.apache.org/dtds/widget-form.xsd">
 
-    <form name="FindPortalPages" type="single" target="FindPortalPage" default-entity-name="PortalPage">
+    <form name="FindPortalPages" type="single" target="FindPortalPage" default-entity-name="PortalPage" default-table-style="table table-striped small">
         <field name="noConditionFind"><hidden value="Y"/><!-- if this isn't there then with all fields empty no query will be done --></field>
         <field name="portalPageId" position="1" title="${uiLabelMap.CommonId}"><text-find/></field>
         <field name="originalPortalPageId" position="2"><text-find/></field>
@@ -29,11 +29,11 @@ under the License.
         <field name="parentPortalPageId" position="2"><text-find/></field>
         <field name="description"><text-find/></field>
         <field name="securityGroupId" position="2" title="${uiLabelMap.CommonSecurityGroupId}"><text-find/></field>
-        <field name="searchButton" title="${uiLabelMap.CommonFind}" widget-style="smallSubmit"><submit button-type="button"/></field>
+        <field name="searchButton" title="${uiLabelMap.CommonFind}" widget-style="smallSubmit btn btn-primary"><submit button-type="button"/></field>
     </form>
 
     <form name="ListPortalPages" type="list" list-name="listIt" paginate-target="FindPortalPage" separate-columns="true"
-        odd-row-style="alternate-row" header-row-style="header-row-2" default-table-style="basic-table hover-bar">
+        odd-row-style="alternate-row" header-row-style="header-row-2 bg-dark" default-table-style="basic-table hover-bar table table-striped">
         <actions>
             <service service-name="performFind" result-map-list="listIt" >
                 <field-map field-name="inputFields" from-field="parameters"/>

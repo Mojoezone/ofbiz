@@ -34,11 +34,11 @@ under the License.
         <input type="hidden" name="paymentMethodId" value="${paymentMethodId}" />
     </#if>
         <input type="hidden" name="partyId" value="${partyId}"/>
-        <div class="button-bar">
-          <a href="<@ofbizUrl>${donePage}?partyId=${partyId}</@ofbizUrl>" class="smallSubmit">${uiLabelMap.CommonCancelDone}</a>
-          <a href="javascript:document.editgiftcardform.submit()" class="smallSubmit">${uiLabelMap.CommonSave}</a>
+        <div class="button-bar mb-4">
+          <a href="<@ofbizUrl>${donePage}?partyId=${partyId}</@ofbizUrl>" class="smallSubmit btn btn-warning">${uiLabelMap.CommonCancelDone}</a>
+          <a href="javascript:document.editgiftcardform.submit()" class="smallSubmit btn btn-success">${uiLabelMap.CommonSave}</a>
         </div>
-        <table class="basic-table" cellspacing="0">
+        <table class="basic-table table" cellspacing="0">
         <tr>
           <td class="label">${uiLabelMap.AccountingCardNumber}</td>
           <td>
@@ -96,8 +96,8 @@ under the License.
         </table>
       </form>
       <div class="button-bar">
-        <a href="<@ofbizUrl>${donePage}?partyId=${partyId}</@ofbizUrl>" class="smallSubmit">${uiLabelMap.CommonCancelDone}</a>
-        <a href="javascript:document.editgiftcardform.submit()" class="smallSubmit">${uiLabelMap.CommonSave}</a>
+        <a href="<@ofbizUrl>${donePage}?partyId=${partyId}</@ofbizUrl>" class="smallSubmit btn btn-warning">${uiLabelMap.CommonCancelDone}</a>
+        <a href="javascript:document.editgiftcardform.submit()" class="smallSubmit btn btn-success">${uiLabelMap.CommonSave}</a>
       </div>
   </div>
 </div>

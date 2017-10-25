@@ -18,8 +18,8 @@ under the License.
 -->
 
   <#if days?has_content>
-    <table class="basic-table hover-bar" cellspacing="0">
-      <tr class="header-row">
+    <table class="basic-table hover-bar table table-striped" cellspacing="0">
+      <tr class="header-row bg-dark text-white">
         <td>${uiLabelMap.CommonStartDateTime}</td>
         <td>${uiLabelMap.CommonEndDateTime}</td>
         <td>${uiLabelMap.CommonType}</td>

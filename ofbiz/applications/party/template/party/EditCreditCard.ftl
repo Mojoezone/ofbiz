@@ -27,9 +27,9 @@ under the License.
     </#if>
   </div>
   <div class="screenlet-body">
-        <div class="button-bar">
-          <a href="<@ofbizUrl>${donePage}?partyId=${partyId}</@ofbizUrl>" class="smallSubmit">${uiLabelMap.CommonCancelDone}</a>
-          <a href="javascript:document.editcreditcardform.submit()" class="smallSubmit">${uiLabelMap.CommonSave}</a>
+        <div class="button-bar mb-4">
+          <a class="btn btn-warning" href="<@ofbizUrl>${donePage}?partyId=${partyId}</@ofbizUrl>" class="smallSubmit">${uiLabelMap.CommonCancelDone}</a>
+          <a class="btn btn-success" href="javascript:document.editcreditcardform.submit()" class="smallSubmit">${uiLabelMap.CommonSave}</a>
         </div>
     <#if !creditCard??>
       <form method="post" action="<@ofbizUrl>createCreditCard?DONE_PAGE=${donePage}</@ofbizUrl>" name="editcreditcardform" style="margin: 0;">
@@ -38,7 +38,7 @@ under the License.
         <input type="hidden" name="paymentMethodId" value="${paymentMethodId}" />
     </#if>
         <input type="hidden" name="partyId" value="${partyId}"/>
-        <table class="basic-table" cellspacing="0">
+        <table class="basic-table table" cellspacing="0">
 
         ${screens.render("component://accounting/widget/CommonScreens.xml#creditCardFields")}
         <tr>
@@ -113,8 +113,8 @@ under the License.
         </table>
       </form>
       <div class="button-bar">
-        <a href="<@ofbizUrl>${donePage}?partyId=${partyId}</@ofbizUrl>" class="smallSubmit">${uiLabelMap.CommonCancelDone}</a>
-        <a href="javascript:document.editcreditcardform.submit()" class="smallSubmit">${uiLabelMap.CommonSave}</a>
+        <a href="<@ofbizUrl>${donePage}?partyId=${partyId}</@ofbizUrl>" class="smallSubmit btn btn-warning">${uiLabelMap.CommonCancelDone}</a>
+        <a href="javascript:document.editcreditcardform.submit()" class="smallSubmit btn btn-success">${uiLabelMap.CommonSave}</a>
       </div>
   </div>
 </div>

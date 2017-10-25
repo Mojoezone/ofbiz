@@ -323,7 +323,7 @@ under the License.
         </sort-order>
     </form>
 
-    <form name="ViewPartyPerson" type="single" default-map-name="lookupPerson">
+    <form name="ViewPartyPerson" type="single" default-map-name="lookupPerson" default-table-style="table bg-light">
         <field name="personalImage" use-when="partyContentId!=null" title="${uiLabelMap.FormFieldTitle_personalImage}"><image value="${personalImage}" style="cssImgStandard"/></field>
         <field name="partyId"><display/></field>
         <field name="name" title="${uiLabelMap.PartyName}"><display description="${lookupPerson.personalTitle} ${lookupPerson.firstName} ${lookupPerson.middleName} ${lookupPerson.lastName}"/></field>
@@ -723,13 +723,13 @@ under the License.
     </form>
 
     <form name="EditPartyAttribute" type="single" target="updatePartyAttribute" default-map-name="attribute"
-        focus-field-name="attrName" header-row-style="header-row" default-table-style="basic-table">
+        focus-field-name="attrName" header-row-style="header-row bg-dark text-white" default-table-style="basic-table table">
         <alt-target use-when="attribute==null" target="createPartyAttribute"/>
         <auto-fields-service service-name="updatePartyAttribute" map-name="attribute"/>
         <field name="partyId"><hidden value="${partyId}"/></field>
         <field use-when="attribute!=null" name="attrName" tooltip="${uiLabelMap.PartyNotModifRecreateAttribute}"><display/></field>
-        <field name="submitButton" title="${uiLabelMap.CommonUpdate}"><submit button-type="button"/></field>
-        <field name="cancelLink" title=" " widget-style="smallSubmit">
+        <field widget-style="btn btn-success" name="submitButton" title="${uiLabelMap.CommonUpdate}"><submit button-type="button"/></field>
+        <field name="cancelLink" title=" " widget-style="smallSubmit btn btn-warning">
             <hyperlink description="${uiLabelMap.CommonCancelDone}" target="${cancelPage}" also-hidden="false">
                 <parameter param-name="partyId"/>
             </hyperlink>
@@ -980,7 +980,7 @@ under the License.
         <field name="comments"><display/></field>
     </form>
 
-    <form name="ListRelatedAccounts" type="list" list-name="accounts" default-table-style="basic-table">
+    <form name="ListRelatedAccounts" type="list" list-name="accounts" header-row-style="bg-dark text-white" default-table-style="basic-table table bg-light">
         <field name="partyIdFrom">
             <display-entity entity-name="PartyNameView" description="${firstName} ${middleName} ${lastName} ${groupName}" key-field-name="partyId">
                 <sub-hyperlink description="[${partyIdFrom}]" target="viewprofile">

@@ -273,8 +273,8 @@
     </menu>
 
     <menu name="PersonUpdate">
-        <menu-item name="update" title="${uiLabelMap.CommonUpdate}">
-            <link target="editperson">
+        <menu-item widget-style="btn btn-secondary" name="update" title="${uiLabelMap.CommonUpdate}">
+            <link style="text-white" target="editperson">
                 <parameter param-name="partyId" from-field="parameters.partyId"/>
             </link>
         </menu-item>
@@ -335,11 +335,11 @@
         </menu-item>
     </menu>
     <menu name="CommunicationsMenu">
-        <menu-item widget-style="btn btn-outline-secondary" name="newEmail" title="${uiLabelMap.PartyNewEmail}">
+        <menu-item widget-style="btn btn-info" name="newEmail" title="${uiLabelMap.PartyNewEmail}">
             <condition>
                 <if-has-permission permission="PARTYMGR_CME-EMAIL_CREATE"/>
             </condition>
-            <link target="${parameters._LAST_VIEW_NAME_}">
+            <link style="text-white" target="${parameters._LAST_VIEW_NAME_}">
                 <parameter param-name="communicationEventTypeId" value="EMAIL_COMMUNICATION"/>
                 <parameter param-name="partyIdFrom" from-field="partyId"/>
                 <parameter param-name="my" value="My"/>
@@ -348,11 +348,11 @@
                 <parameter param-name="portalPageId" from-field="parameters.portalPageId"/>
             </link>
         </menu-item>
-        <menu-item widget-style="btn btn-outline-secondary" name="newNote" title="${uiLabelMap.PartyNewInternalNote}">
+        <menu-item widget-style="btn btn-info" name="newNote" title="${uiLabelMap.PartyNewInternalNote}">
             <condition>
                 <if-has-permission permission="PARTYMGR_CME-NOTE_CREATE"/>
             </condition>
-            <link target="${parameters._LAST_VIEW_NAME_}">
+            <link style="text-white" target="${parameters._LAST_VIEW_NAME_}">
                 <parameter param-name="communicationEventTypeId" value="COMMENT_NOTE"/>
                 <parameter param-name="partyIdFrom" from-field="partyId"/>
                 <parameter param-name="my" value="My"/>
@@ -361,23 +361,23 @@
                 <parameter param-name="portalPageId" from-field="parameters.portalPageId"/>
             </link>
         </menu-item>
-        <menu-item name="openEvents" title="${uiLabelMap.PartyOpenEvents}">
+        <menu-item widget-style="btn btn-info" name="openEvents" title="${uiLabelMap.PartyOpenEvents}">
             <condition>
                 <if-compare field="parameters.all" operator="equals" value="true"/>
             </condition>
-            <link target="${parameters._LAST_VIEW_NAME_}">
+            <link style="text-white" target="${parameters._LAST_VIEW_NAME_}">
                 <parameter param-name="portalPageId" from-field="parameters.portalPageId"/>
                 <parameter param-name="all" value="false"/>
             </link>
         </menu-item>
-        <menu-item widget-style="btn btn-outline-secondary" name="allOtherEvents" title="${uiLabelMap.PartyAllEvents}">
+        <menu-item widget-style="btn btn-info" name="allOtherEvents" title="${uiLabelMap.PartyAllEvents}">
             <condition>
                 <or>
                     <if-compare field="parameters.all" operator="equals" value="false"/>
                     <if-empty field="parameters.all"/>
                 </or>
             </condition>
-            <link target="${parameters._LAST_VIEW_NAME_}">
+            <link style="text-white" target="${parameters._LAST_VIEW_NAME_}">
                 <parameter param-name="portalPageId" from-field="parameters.portalPageId"/>
                     <parameter param-name="all" value="true"/>
             </link>
@@ -728,8 +728,8 @@
     </menu>
 
     <menu name="AddRelContactAccounts">
-        <menu-item name="add" title="${uiLabelMap.CommonCreateNew}">
-            <link target="${parameters._LAST_VIEW_NAME_}">
+        <menu-item widget-style="btn btn-info" name="add" title="${uiLabelMap.CommonCreateNew}">
+            <link style="text-white" target="${parameters._LAST_VIEW_NAME_}">
                 <parameter param-name="partyId"/>
                 <parameter param-name="portalPageId"/>
                 <parameter param-name="editPartyRel" value="Y"/>

@@ -301,7 +301,7 @@ under the License.
                                 <if-empty-section section-name="left-column" />
                             </condition>
                             <widgets>
-                                <container id="content-main-section" style="mt-5 mb-5 container-fluid">
+                                <container id="content-main-section" style="mt-5 mb-5 container">
                                     <decorator-section-include name="body" />
                                 </container>
                             </widgets>

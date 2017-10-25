@@ -115,7 +115,7 @@ under the License.
     </form>
 
     <form name="EditBillingAccount" type="single" target="updateBillingAccount" title=""
-        header-row-style="header-row" default-table-style="basic-table">
+        header-row-style="header-row" default-table-style="basic-table table">
         <actions>
             <set field="availableBalance" value="${groovy:billingAccount != null ? org.apache.ofbiz.order.order.OrderReadHelper.getBillingAccountBalance(billingAccount) : 0}" type="BigDecimal"/>
         </actions>

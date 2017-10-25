@@ -80,14 +80,14 @@ under the License.
         </actions>
         <alt-target use-when="workEffort==null" target="${createCalEventUrl}" />
         <alt-target use-when="workEffort!=null" target="${updateCalEventUrl}" />
-        <field name="workEffortId" use-when="workEffort!=null"><hidden /></field>
-        <field name="start"><hidden value="${parameters.start}" /></field>
-        <field name="partyId"><hidden value="${parameters.userLogin.partyId}" /></field>
-        <field name="fixedAssetId"><hidden value="${parameters.fixedAssetId}" /></field>
-        <field name="roleTypeId" use-when="workEffort==null"><hidden value="CAL_OWNER" /></field>
-        <field name="statusId" use-when="workEffort==null"><hidden value="PRTYASGN_ASSIGNED" /></field>
-        <field name="workEffortName" title="${uiLabelMap.WorkEffortEventName}"><text /></field>
-        <field name="description" title="${uiLabelMap.CommonDescription}"><text /></field>
+        <field widget-style="form-control" name="workEffortId" use-when="workEffort!=null"><hidden /></field>
+        <field widget-style="form-control"  name="start"><hidden value="${parameters.start}" /></field>
+        <field widget-style="form-control" name="partyId"><hidden value="${parameters.userLogin.partyId}" /></field>
+        <field widget-style="form-control" name="fixedAssetId"><hidden value="${parameters.fixedAssetId}" /></field>
+        <field widget-style="form-control" name="roleTypeId" use-when="workEffort==null"><hidden value="CAL_OWNER" /></field>
+        <field widget-style="form-control" name="statusId" use-when="workEffort==null"><hidden value="PRTYASGN_ASSIGNED" /></field>
+        <field widget-style="form-control" name="workEffortName" title="${uiLabelMap.WorkEffortEventName}"><text /></field>
+        <field widget-style="form-control" name="description" title="${uiLabelMap.CommonDescription}"><text /></field>
         <!-- This is wrong. A calendar item work effort type is an EVENT. "Meeting" is a work effort purpose. -->
         <field widget-style="form-control" name="workEffortTypeId" use-when="parentTypeId!=void" title="${uiLabelMap.PartyEventType}">
             <drop-down no-current-selected-key="MEETING">
@@ -97,7 +97,7 @@ under the License.
                 </entity-options>
             </drop-down>
         </field>
-        <field name="workEffortTypeId" use-when="parentTypeId==void" title="${uiLabelMap.PartyEventType}">
+        <field  widget-style="form-control" name="workEffortTypeId" use-when="parentTypeId==void" title="${uiLabelMap.PartyEventType}">
             <drop-down>
                 <entity-options entity-name="WorkEffortType">
                     <entity-order-by field-name="description" />
@@ -111,7 +111,7 @@ under the License.
                 </entity-options>
             </drop-down>
         </field>
-        <field name="scopeEnumId">
+        <field  widget-style="form-control" name="scopeEnumId">
             <drop-down no-current-selected-key="WES_PRIVATE">
                 <entity-options entity-name="Enumeration" key-field-name="enumId">
                     <entity-constraint name="enumTypeId" value="WORK_EFF_SCOPE" />
@@ -119,8 +119,8 @@ under the License.
                 </entity-options>
             </drop-down>
         </field>
-        <field widget-style="mb-1" name="estimatedStartDate"><date-time input-method="time-dropdown" /></field>
-        <field widget-style="mb-1" name="estimatedCompletionDate"><date-time input-method="time-dropdown" /></field>
+        <field name="estimatedStartDate"><date-time input-method="time-dropdown" /></field>
+        <field name="estimatedCompletionDate"><date-time input-method="time-dropdown" /></field>
         <field name="actualStartDate" use-when="workEffort!=null"><date-time input-method="time-dropdown" /></field>
         <field name="actualCompletionDate" use-when="workEffort!=null"><date-time input-method="time-dropdown" /></field>
         <field widget-style="btn btn-primary" name="addButton" use-when="workEffort==null"><submit /></field>

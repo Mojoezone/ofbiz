@@ -26,7 +26,7 @@ under the License.
   <#else>
     <#assign entryWidth = (100 / (maxConcurrentEntries))>
   </#if>
-<table cellspacing="0" class="basic-table calendar table">
+<table cellspacing="0" class="basic-table calendar table table-striped">
   <tr class="header-row bg-dark text-white">
     <td>${uiLabelMap.CommonTime}</td>
     <td colspan="${maxConcurrentEntries}">${uiLabelMap.WorkEffortCalendarEntries}</td>
@@ -36,8 +36,8 @@ under the License.
     <#if (nowTimestamp >= period.start) && (nowTimestamp <= period.end)><#assign currentPeriod = true/></#if>
   <tr<#if currentPeriod> class="current-period"<#else><#if (period.calendarEntries?size > 0)> class="active-period"</#if></#if>>
     <td class="centered" width="1%">
-      <a href="<@ofbizUrl>${parameters._LAST_VIEW_NAME_}?period=day&amp;startTime=${period.start.time?string("#")}${urlParam!}${addlParam!}</@ofbizUrl>">${period.start?date?string("EEEE")?cap_first}&nbsp;${period.start?date?string.short}</a><br />
-      <a href="<@ofbizUrl>${newCalEventUrl}?period=week&amp;form=edit&amp;startTime=${parameters.start!}&amp;parentTypeId=${parentTypeId!}&amp;currentStatusId=CAL_TENTATIVE&amp;estimatedStartDate=${period.start?string("yyyy-MM-dd HH:mm:ss")}&amp;estimatedCompletionDate=${period.end?string("yyyy-MM-dd HH:mm:ss")}${addlParam!}${urlParam!}</@ofbizUrl>">${uiLabelMap.CommonAddNew}</a>
+      <a class="text-info" href="<@ofbizUrl>${parameters._LAST_VIEW_NAME_}?period=day&amp;startTime=${period.start.time?string("#")}${urlParam!}${addlParam!}</@ofbizUrl>">${period.start?date?string("EEEE")?cap_first}&nbsp;${period.start?date?string.short}</a><br />
+      <a class="btn btn-info text-white mt-2" href="<@ofbizUrl>${newCalEventUrl}?period=week&amp;form=edit&amp;startTime=${parameters.start!}&amp;parentTypeId=${parentTypeId!}&amp;currentStatusId=CAL_TENTATIVE&amp;estimatedStartDate=${period.start?string("yyyy-MM-dd HH:mm:ss")}&amp;estimatedCompletionDate=${period.end?string("yyyy-MM-dd HH:mm:ss")}${addlParam!}${urlParam!}</@ofbizUrl>">${uiLabelMap.CommonAddNew}</a>
     </td>
     <#list period.calendarEntries as calEntry>
         <#if calEntry.workEffort.actualStartDate??>

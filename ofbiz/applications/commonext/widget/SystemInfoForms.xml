@@ -50,9 +50,9 @@ under the License.
     </form>
     
     <form name="CreateSystemInfoNote" type="single" target="createSystemInfoNote">
-        <field name="noteParty"><text/></field>
-        <field name="moreInfoUrl"><text size="50"/></field>
-        <field name="noteInfo"><text size="50"/></field>
-        <field name="createButton"><submit/></field>
+        <field widget-style="form-control ml-2" name="noteParty"><text/></field>
+        <field widget-style="form-control ml-2" name="moreInfoUrl"><text size="50"/></field>
+        <field widget-style="form-control ml-2" name="noteInfo"><text size="50"/></field>
+        <field widget-style="btn btn-primary mt-2 mb-5" name="createButton"><submit/></field>
     </form>
 </forms>

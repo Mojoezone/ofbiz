@@ -22,15 +22,15 @@ under the License.
       <ul>
         <li class="h3">${uiLabelMap.PartyAttributes}</li>
         <#if security.hasEntityPermission("PARTYMGR", "_CREATE", session)>
-          <li><a href="<@ofbizUrl>editPartyAttribute?partyId=${party.partyId!}</@ofbizUrl>">${uiLabelMap.CommonCreateNew}</a></li>
+          <li><a class="btn btn-info" href="<@ofbizUrl>editPartyAttribute?partyId=${party.partyId!}</@ofbizUrl>">${uiLabelMap.CommonCreateNew}</a></li>
         </#if>
       </ul>
       <br class="clear"/>
     </div>
     <div class="screenlet-body">
       <#if attributes?has_content>
-        <table class="basic-table hover-bar" cellspacing="0">
-            <tr class="header-row">
+        <table class="basic-table hover-bar table" cellspacing="0">
+            <tr class="header-row bg-dark text-white">
               <td>${uiLabelMap.CommonName}</td>
               <td>${uiLabelMap.CommonValue}</td>
               <td>&nbsp;</td>

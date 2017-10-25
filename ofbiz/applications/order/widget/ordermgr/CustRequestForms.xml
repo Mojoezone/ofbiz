@@ -84,37 +84,37 @@ under the License.
     </form>
 
     <form name="ListRequestList" type="list" use-row-submit="true" list-name="custRequests" title="List of customer requests" sort-field-parameter-name="custRequestSortField"
-        odd-row-style="alternate-row" header-row-style="header-row-2 bg-dark text-white" default-table-style="basic-table hover-bar table table-striped">
-        <field name="custRequestId" sort-field="true">
+        odd-row-style="alternate-row" header-row-style="header-row-2 bg-dark text-white small" default-table-style="basic-table hover-bar table table-striped mb-4">
+        <field widget-style="small" name="custRequestId" sort-field="true">
             <hyperlink description="${custRequestId}" target="ViewRequest">
                 <parameter param-name="custRequestId"/>
             </hyperlink>
         </field>
-        <field name="custRequestTypeId"><display-entity entity-name="CustRequestType"/></field>
-        <field name="productStoreId">
+        <field widget-style="small" name="custRequestTypeId"><display-entity entity-name="CustRequestType"/></field>
+        <field widget-style="small" name="productStoreId">
             <display-entity entity-name="ProductStore" description="${storeName}">
                 <sub-hyperlink description="[${productStoreId}]" target="/catalog/control/EditProductStore" target-type="inter-app">
                     <parameter param-name="productStoreId"/>
                 </sub-hyperlink>
             </display-entity>
         </field>
-        <field name="custRequestName" sort-field="true"><display/></field>
-        <field name="priority" sort-field="true"><display/></field>
-        <field name="custRequestDate" sort-field="true"><display/></field>
-        <field name="responseRequiredDate" sort-field="true"><display/></field>
-        <field name="fromPartyId" sort-field="true">
+        <field widget-style="small" name="custRequestName" sort-field="true"><display/></field>
+        <field widget-style="small" name="priority" sort-field="true"><display/></field>
+        <field widget-style="small" name="custRequestDate" sort-field="true"><display/></field>
+        <field widget-style="small" name="responseRequiredDate" sort-field="true"><display/></field>
+        <field widget-style="small" name="fromPartyId" sort-field="true">
             <display-entity entity-name="PartyNameView" key-field-name="partyId" description="${firstName} ${middleName} ${lastName} ${groupName}">
                 <sub-hyperlink description="[${fromPartyId}]" target="/partymgr/control/viewprofile" target-type="inter-app">
                     <parameter param-name="partyId" from-field="fromPartyId"/>
                 </sub-hyperlink>
             </display-entity>
         </field>
-        <field name="statusId" sort-field="true">
+        <field widget-style="small" name="statusId" sort-field="true">
             <display-entity also-hidden="false" entity-name="StatusItem"/>
         </field>
-        <field name="lastModifiedDate" sort-field="true"><display/></field>
+        <field widget-style="small" name="lastModifiedDate" sort-field="true"><display/></field>
         <!--field name="statusId"><hidden value="CRQ_REJECTED"/></field-->
-        <field name="rejectButton">
+        <field widget-style="small" name="rejectButton">
             <hyperlink description="${uiLabelMap.FormFieldTitle_rejectButton}" target="setCustRequestStatus">
                 <parameter param-name="custRequestId"/>
                 <parameter param-name="statusId" value="CRQ_REJECTED"/>
@@ -236,19 +236,19 @@ under the License.
     </form>
 
     <form name="EditCustRequest" type="single" target="updaterequest" title="Request" default-map-name="custRequest"
-        header-row-style="header-row" default-table-style="basic-table">
+        header-row-style="header-row" default-table-style="basic-table table table-striped">
         <alt-target use-when="custRequest==null" target="createrequest"/>
         <auto-fields-service service-name="updateCustRequest" default-field-type="edit"/>
         <field name="form"><hidden value="list"/></field>
         <field name="portalPageId"><hidden value="${parameters.portalPageId}"/></field>
         <field name="custRequestId"><hidden/></field>
         <field name="communicationEventId"><hidden value="${communicationEvent.communicationEventId}"/></field>
-        <field name="custRequestTypeId">
+        <field widget-style="form-control" name="custRequestTypeId">
             <drop-down allow-empty="false">
                 <entity-options entity-name="CustRequestType"/>
             </drop-down>
         </field>
-        <field name="custRequestName" encode-output="false"><text default-value="${communicationEvent.subject}"/></field>
+        <field widget-style="form-control" name="custRequestName" encode-output="false"><text default-value="${communicationEvent.subject}"/></field>
         <field name="salesChannelEnumId" title="${uiLabelMap.OrderSalesChannel}">
             <drop-down allow-empty="true">
                 <entity-options entity-name="Enumeration" key-field-name="enumId">
@@ -272,7 +272,7 @@ under the License.
                 </entity-options>
             </drop-down>
         </field>
-        <field name="priority">
+        <field widget-style="rounded" name="priority">
             <drop-down allow-empty="true">
                 <option key="1" description="${uiLabelMap.WorkEffortPriorityOne}"/>
                 <option key="2" description="${uiLabelMap.WorkEffortPriorityTwo}"/>
@@ -285,7 +285,7 @@ under the License.
                 <option key="9" description="${uiLabelMap.WorkEffortPriorityNine}"/>
             </drop-down>
         </field>
-        <field name="story" use-when="custRequest==null" encode-output="false"><textarea cols="60" rows="12" default-value="${communicationEvent.content}"/></field>
+        <field widget-style="form-control" name="story" use-when="custRequest==null" encode-output="false"><textarea cols="60" rows="12" default-value="${communicationEvent.content}"/></field>
         <field name="maximumAmountUomId">
             <drop-down allow-empty="true" no-current-selected-key="${defaultOrganizationPartyCurrencyUomId}">
                 <entity-options key-field-name="uomId" description="${description} - ${abbreviation}" entity-name="Uom">
@@ -315,7 +315,7 @@ under the License.
                 </entity-options>
             </drop-down>
         </field>
-        <field name="parentCustRequestId"><lookup target-form-name="LookupCustRequest"/></field>
+        <field widget-style="form-control" name="parentCustRequestId"><lookup target-form-name="LookupCustRequest"/></field>
         <field name="createdDate"><hidden/></field>
         <field name="createdByUserLogin"><hidden/></field>
         <field name="lastModifiedDate"><hidden/></field>

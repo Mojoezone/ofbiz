@@ -34,10 +34,10 @@ under the License.
   ${cardNumberDisplay!}
 </#macro>
 
-  <div id="partyPaymentMethod" class="screenlet">
+  <div id="partyPaymentMethod" class="screenlet mb-5 bg-light pl-2 pt-2 pb-2">
     <div class="screenlet-title-bar">
       <ul>
-        <li class="h3">${uiLabelMap.AccountingPaymentMethod}</li>
+        <li class="h4">${uiLabelMap.AccountingPaymentMethod}</li>
         <#if security.hasEntityPermission("PAY_INFO", "_CREATE", session) || security.hasEntityPermission("ACCOUNTING", "_CREATE", session)>
           <li><a href="<@ofbizUrl>editeftaccount?partyId=${partyId}</@ofbizUrl>">${uiLabelMap.AccountingCreateEftAccount}</a></li>
           <li><a href="<@ofbizUrl>editgiftcard?partyId=${partyId}</@ofbizUrl>">${uiLabelMap.AccountingCreateGiftCard}</a></li>

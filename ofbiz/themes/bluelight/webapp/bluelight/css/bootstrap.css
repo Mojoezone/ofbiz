@@ -8194,6 +8194,9 @@ ul{
 li{
     list-style-type: none;
 }
+textarea{
+    resize: none !important;
+}
 
 /* custom css for main-navigation */
 .main-nav-container{
@@ -8266,16 +8269,16 @@ li.expanded, li.collapsed{
     list-style-type:none;
 }
 li.expanded a::before{
-    content:"-";
+    content:"- expanded";
 }
 li.collapsed a::before{
-    content:"+";
+    content:"+ collapsed";
 }
 li.expanded a, li.collapsed a{
     cursor:pointer;
 }
 .screenlet-title-bar li.expanded,.screenlet-title-bar li.collapsed{
-    font-size: 2em;
+    font-size: 1em;
 }
 
 /* add bg color transparent class */
@@ -8286,4 +8289,37 @@ li.expanded a, li.collapsed a{
 /* image class shrink the thumnail to 15% */
 .img-thumbnail-small{
     width: 15%;
+}
+
+/* calendar */
+.ui-datepicker-trigger{
+    background: url(../images/buttonImage.gif) center center no-repeat;
+    width: 16px;
+    height: 16px;
+}
+
+#ui-datepicker-div{
+    background-color: #343a40;
+    padding: 5px;
+    color: #FFF;
+}
+.ui-datepicker-next, .ui-datepicker-close{
+    float: right;
+}
+.ui-datepicker-next, .ui-datepicker-prev, .ui-datepicker-current, .ui-datepicker-close{
+    background-color: #138496;
+    border:#117a8b;
+    padding: 2px 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.ui-datepicker-calendar th{
+    font-size: 1em;
+    font-weight: 200;
+}
+
+.ui-datepicker-calendar td{
+    border: 1px solid #666;
+    padding: 5px;
 }

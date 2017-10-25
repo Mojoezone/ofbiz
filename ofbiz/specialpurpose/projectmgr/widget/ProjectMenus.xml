@@ -586,11 +586,11 @@
         </menu-item>
     </menu>
     <menu name="TimesheetBar">
-        <menu-item name="setToComplete" title="${uiLabelMap.CommonStatustoComplete}">
+        <menu-item widget-style="btn btn-info" name="setToComplete" title="${uiLabelMap.CommonStatustoComplete}">
             <condition>
                 <if-compare field="timesheet.statusId" operator="equals" value="TIMESHEET_IN_PROCESS"/>
             </condition>
-            <link target="${my}StatusToComplete">
+            <link style="text-white" target="${my}StatusToComplete">
                 <parameter param-name="timesheetId" from-field="timesheet.timesheetId"/>
                 <parameter param-name="statusId" value="TIMESHEET_COMPLETED"/>
             </link>

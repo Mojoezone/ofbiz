@@ -20,7 +20,7 @@ under the License.
   <div id="partyAVS" class="screenlet">
     <div class="screenlet-title-bar">
       <ul>
-        <li class="h3">${uiLabelMap.PartyAvsOver}</li>
+        <li class="h4">${uiLabelMap.PartyAvsOver}</li>
       </ul>
       <br class="clear"/>
     </div>

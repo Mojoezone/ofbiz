@@ -487,7 +487,7 @@ under the License.
     </form>
     
     <form name="ListPartyCommEvents" type="list" target="RemoveCommunicationEventRole" list-name="listIt"
-        odd-row-style="alternate-row" header-row-style="header-row-2" default-table-style="basic-table hover-bar" sort-field-parameter-name="partyCommEventSortField">
+        odd-row-style="alternate-row" header-row-style="header-row-2 bg-dark text-white" default-table-style="basic-table hover-bar table table-striped mt-5" sort-field-parameter-name="partyCommEventSortField">
         <actions>
             <set field="parameters.partyCommEventSortField" from-field="parameters.partyCommEventSortField" default-value="${groovy: 'true'.equals(parameters.all) ? '-entryDate' : 'entryDate'}"/>
             <set field="searchParameters.partyId" from-field="partyId"/>
@@ -899,7 +899,7 @@ under the License.
     <form name="ListMyUnknownPartyEmails" type="multi" use-row-submit="true"
         title="Email List unknown parties" list-name="commEventsUnknown"
         target="deleteCommunicationEvents" default-entity-name="CommunicationEvent"
-        odd-row-style="alternate-row" header-row-style="header-row-2" default-table-style="basic-table hover-bar">
+        odd-row-style="alternate-row" header-row-style="header-row-2 bg-dark text-white" default-table-style="basic-table hover-bar table table-striped">
         <row-actions>
             <set field="subject" from-field="subject" default-value="${uiLabelMap.PartyNoSubject}"/>
         </row-actions>
@@ -919,7 +919,7 @@ under the License.
         </field>
         <field name="note" widget-area-style="fieldWidth200"><display/></field>
         <field name="_rowSubmit" title="${uiLabelMap.CommonYes}"><check/></field>
-        <field name="deleteSelectedButton" widget-style="smallSubmit"><submit/></field>
+        <field name="deleteSelectedButton" widget-style="smallSubmit btn btn-primary"><submit/></field>
     </form>
 
     <form name="AllocateMsgToPartyForm" type="single" target="allocateMsgToParty" title="create a new party for a unknown incoming email address">
@@ -981,7 +981,7 @@ under the License.
     </form>
 
     <form name="ListDraftEmails" type="list" extends="ListCommEvents" extends-resource="component://party/widget/partymgr/CommunicationEventForms.xml" target="deleteCommunicationEvent"
-        use-row-submit="true" header-row-style="header-row-2" list-name="commEventDraft">
+        use-row-submit="true" header-row-style="header-row-2 bg-dark text-white" default-table-style="table table-striped" list-name="commEventDraft">
         <field name="portalPageId"><hidden value="${parameters.portalPageId}"/></field>
         <field name="subject">
             <hyperlink description="${subject}" target="${parameters._LAST_VIEW_NAME_}">
@@ -992,7 +992,7 @@ under the License.
                 <parameter param-name="portalPageId" from-field="parameters.portalPageId"/>
             </hyperlink>
         </field>
-        <field name="removeLink" title="${uiLabelMap.CommonDelete}" widget-style="smallSubmit"><submit/></field>
+        <field name="removeLink" title="${uiLabelMap.CommonDelete}" widget-style="smallSubmit btn btn-secondary"><submit/></field>
     </form>
     <form name="ListProgressEmails" type="list" extends="ListPartyCommEvents" list-name="commEventProgress">
         <field name="partyIdFrom"><ignored/></field>

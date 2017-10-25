@@ -14,31 +14,31 @@
       <input type="hidden" name='paymentMethodId' value='${paymentMethodData.paymentMethodId}' />
     </#if>
       <input type="hidden" name="partyId" value="${parameters.partyId}"/>
-      <table class="basic-table" cellspacing="0">
+      <table class="basic-table table table-striped" cellspacing="0">
         <tr>
           <td class="label">${uiLabelMap.AccountingNameAccount}</td>
           <td>
-            <input type="text" class='required' size="30" maxlength="60" name="nameOnAccount" value="${checkAccountData.nameOnAccount!}"/>
+            <input type="text" class='required form-control' size="30" maxlength="60" name="nameOnAccount" value="${checkAccountData.nameOnAccount!}"/>
             <span class="tooltip">${uiLabelMap.CommonRequired}</span>
           </td>
         </tr>
         <tr>
           <td class="label">${uiLabelMap.AccountingCompanyNameAccount}</td>
           <td>
-            <input type="text" size="30" maxlength="60" name="companyNameOnAccount" value="${checkAccountData.companyNameOnAccount!}"/>
+            <input class="form-control" type="text" size="30" maxlength="60" name="companyNameOnAccount" value="${checkAccountData.companyNameOnAccount!}"/>
           </td>
         </tr>
         <tr>
           <td class="label">${uiLabelMap.AccountingBankName}</td>
           <td>
-            <input type="text" class='required' size="30" maxlength="60" name="bankName" value="${checkAccountData.bankName!}" />
+            <input type="text" class='required form-control' size="30" maxlength="60" name="bankName" value="${checkAccountData.bankName!}" />
             <span class="tooltip">${uiLabelMap.CommonRequired}</span>
           </td>
         </tr>
         <tr>
           <td class="label">${uiLabelMap.CommonPaymentMethodType}</td>
           <td>
-            <select name="paymentMethodTypeId" class='required'>
+            <select name="paymentMethodTypeId" class='required rounded'>
               <option>${paymentMethodData.paymentMethodTypeId!}</option>
               <option></option>
               <option>CERTIFIED_CHECK</option>
@@ -51,13 +51,13 @@
         <tr>
           <td class="label">${uiLabelMap.AccountingRoutingNumber}</td>
           <td>
-            <input type="text" size="10" maxlength="30" name="routingNumber" value="${checkAccountData.routingNumber!}"/>
+            <input class="form-control" type="text" size="10" maxlength="30" name="routingNumber" value="${checkAccountData.routingNumber!}"/>
           </td>
         </tr>
         <tr>
           <td class="label">${uiLabelMap.AccountingAccountType}</td>
           <td>
-            <select name="accountType">
+            <select name="accountType" class="rounded">
               <option>${checkAccountData.accountType!}</option>
               <option></option>
               <option>${uiLabelMap.CommonChecking}</option>
@@ -68,13 +68,13 @@
         <tr>
           <td class="label">${uiLabelMap.AccountingAccountNumber}</td>
           <td>
-            <input type="text" size="20" maxlength="40" name="accountNumber" value="${checkAccountData.accountNumber!}"/>
+            <input class="form-control" type="text" size="20" maxlength="40" name="accountNumber" value="${checkAccountData.accountNumber!}"/>
           </td>
         </tr>
         <tr>
           <td class="label">${uiLabelMap.CommonDescription}</td>
           <td>
-            <input type="text" size="30" maxlength="60" name="description" value="${paymentMethodData.description!}"/>
+            <input class="form-control" type="text" size="30" maxlength="60" name="description" value="${paymentMethodData.description!}"/>
           </td>
         </tr>
         <tr>
@@ -141,8 +141,8 @@
       </table>
     </form>
     <div class="button-bar">
-      <a href="<@ofbizUrl>${donePage}?partyId=${partyId}</@ofbizUrl>" class="smallSubmit">${uiLabelMap.CommonCancelDone}</a>
-      <a href="javascript:document.addcheckform.submit()" class="smallSubmit">${uiLabelMap.CommonSave}</a>
+      <a href="<@ofbizUrl>${donePage}?partyId=${partyId}</@ofbizUrl>" class="smallSubmit btn btn-warning">${uiLabelMap.CommonCancelDone}</a>
+      <a href="javascript:document.addcheckform.submit()" class="smallSubmit btn btn-success">${uiLabelMap.CommonSave}</a>
     </div>
   </div>
 </div>

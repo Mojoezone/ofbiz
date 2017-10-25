@@ -92,7 +92,7 @@ under the License.
     </form>
 
     <form name="AddUserLoginSecurityGroup" type="single" target="${addUserLoginSecurityGroupURI}"
-        header-row-style="header-row" default-table-style="basic-table">
+        header-row-style="header-row" default-table-style="basic-table table">
         <auto-fields-service service-name="addUserLoginToSecurityGroup"/>
         <field name="partyId"><hidden value="${partyId}"/></field>
         <field name="userLoginId"><hidden/></field>
@@ -103,7 +103,7 @@ under the License.
                 </entity-options>
             </drop-down>
         </field>
-        <field name="submitButton" title="${uiLabelMap.CommonAdd}"><submit button-type="button"/></field>
+        <field widget-style="btn btn-primary" name="submitButton" title="${uiLabelMap.CommonAdd}"><submit button-type="button"/></field>
     </form>
 
     <form name="CertIssuerList" type="list" list-name="issuerProvisions"
@@ -235,8 +235,8 @@ under the License.
     </form>
 
     <form name="ListUserLoginSecurityGroups" type="list"
-        list-name="userLoginSecurityGroups" header-row-style="header-row-2" target="${updateUserLoginSecurityGroupURI}"
-        odd-row-style="alternate-row" default-table-style="basic-table hover-bar">
+        list-name="userLoginSecurityGroups" header-row-style="header-row-2 bg-dark text-white" target="${updateUserLoginSecurityGroupURI}"
+        odd-row-style="alternate-row" default-table-style="basic-table hover-bar table">
         <actions>
             <entity-condition entity-name="UserLoginAndSecurityGroup">
                 <condition-expr field-name="userLoginId" from-field="userLoginId"/>
@@ -255,7 +255,7 @@ under the License.
         <field name="userLoginId"><hidden/></field>
         <field name="fromDate" title="${uiLabelMap.CommonFromDate}"><display/></field>
         <field name="thruDate" title="${uiLabelMap.CommonThruDate}" red-when="before-now"><date-time/></field>
-        <field name="submitButton" title="${uiLabelMap.CommonUpdate}"><submit button-type="button"/></field>
+        <field widget-style="mt-1" name="submitButton" title="${uiLabelMap.CommonUpdate}"><submit button-type="button"/></field>
         <field name="deleteLink" title=" " widget-style="buttontext">
             <hyperlink description="${uiLabelMap.CommonRemove}" target="${removeUserLoginSecurityGroupURI}" also-hidden="false">
                 <parameter param-name="partyId"/>

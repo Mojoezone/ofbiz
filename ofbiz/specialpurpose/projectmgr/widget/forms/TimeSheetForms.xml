@@ -20,7 +20,7 @@
 <forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
         xmlns="http://ofbiz.apache.org/Widget-Form" xsi:schemaLocation="http://ofbiz.apache.org/Widget-Form http://ofbiz.apache.org/dtds/widget-form.xsd">
     <form name="EditWeekTimesheet" type="multi" list-name="timeEntries" use-row-submit="true"
-        separate-columns="true" target="update${my}Timesheet" odd-row-style="alternate-row" default-table-style="basic-table hover-bar">
+        separate-columns="true" target="update${my}Timesheet" odd-row-style="alternate-row" header-row-style="bg-dark text-white" default-table-style="basic-table hover-bar table table-striped small">
         <row-actions>
             <service service-name="getProjectIdAndNameFromTask" result-map="result">
                 <field-map field-name="taskId" from-field="workEffortId"/>
@@ -29,7 +29,7 @@
         <field name="timesheetId"><hidden/></field>
         <field name="roleTypeId"><hidden/></field>
         <field name="fromDate"><hidden/></field>
-        <field name="workEffortId" title="${uiLabelMap.ProjectMgrTaskName}">
+        <field widget-style="form-control" name="workEffortId" title="${uiLabelMap.ProjectMgrTaskName}">
             <drop-down allow-empty="true" current-description="${result.taskWbsId} ${result.projectName} -- ${result.phaseName} -- ${result.taskName} ${phaseName}">
                 <entity-options entity-name="ProjectPartyAndPhaseAndTask" description="${projectId}.${phaseSeqNum}.${sequenceNum} ${projectName} -- ${phaseName} -- ${workEffortName}">
                     <entity-constraint name="projectStatusId" operator="not-equals" value="PRJ_CLOSED"/>
@@ -49,22 +49,22 @@
             </drop-down>
         </field>
         <field name="checkComplete" title="${uiLabelMap.ProjectMgrCheckComplete}"><check/></field>
-        <field name="rateTypeId" title="${uiLabelMap.ProjectMgrRateTypeId}">
+        <field widget-style="form-control" name="rateTypeId" title="${uiLabelMap.ProjectMgrRateTypeId}">
             <drop-down allow-empty="false" no-current-selected-key="${defaultRateTypeId}">
                 <entity-options entity-name="RateType"/>
             </drop-down>
         </field>
-        <field name="d0" parameter-name="hoursDay0" title="${uiLabelMap.ProjectMgrMon}"><text size="2"/></field>
-        <field name="d1" parameter-name="hoursDay1" title="${uiLabelMap.ProjectMgrTue}"><text size="2"/></field>
-        <field name="d2" parameter-name="hoursDay2" title="${uiLabelMap.ProjectMgrWen}"><text size="2"/></field>
-        <field name="d3" parameter-name="hoursDay3" title="${uiLabelMap.ProjectMgrThu}"><text size="2"/></field>
-        <field name="d4" parameter-name="hoursDay4" title="${uiLabelMap.ProjectMgrFri}"><text size="2"/></field>
-        <field name="d5" parameter-name="hoursDay5" title="${uiLabelMap.ProjectMgrSat}"><text size="2"/></field>
-        <field name="d6" parameter-name="hoursDay6" title="${uiLabelMap.ProjectMgrSun}"><text size="2"/></field>
-        <field name="total" title="${uiLabelMap.ProjectMgrActualHours}"><display/></field>
-        <field name="actualHours" title="${uiLabelMap.ProjectMgrActualTotal}"><display/></field>
-        <field name="plannedHours" title="${uiLabelMap.ProjectMgrPlanHours}"><display/></field>
-        <field name="updateButton"><submit button-type="button"/></field>
+        <field widget-style="form-control" name="d0" parameter-name="hoursDay0" title="${uiLabelMap.ProjectMgrMon}"><text size="2"/></field>
+        <field widget-style="form-control" name="d1" parameter-name="hoursDay1" title="${uiLabelMap.ProjectMgrTue}"><text size="2"/></field>
+        <field widget-style="form-control" name="d2" parameter-name="hoursDay2" title="${uiLabelMap.ProjectMgrWen}"><text size="2"/></field>
+        <field widget-style="form-control" name="d3" parameter-name="hoursDay3" title="${uiLabelMap.ProjectMgrThu}"><text size="2"/></field>
+        <field widget-style="form-control" name="d4" parameter-name="hoursDay4" title="${uiLabelMap.ProjectMgrFri}"><text size="2"/></field>
+        <field widget-style="form-control" name="d5" parameter-name="hoursDay5" title="${uiLabelMap.ProjectMgrSat}"><text size="2"/></field>
+        <field widget-style="form-control" name="d6" parameter-name="hoursDay6" title="${uiLabelMap.ProjectMgrSun}"><text size="2"/></field>
+        <field widget-style="form-control" name="total" title="${uiLabelMap.ProjectMgrActualHours}"><display/></field>
+        <field widget-style="form-control" name="actualHours" title="${uiLabelMap.ProjectMgrActualTotal}"><display/></field>
+        <field widget-style="form-control" name="plannedHours" title="${uiLabelMap.ProjectMgrPlanHours}"><display/></field>
+        <field widget-style="btn btn-primary" name="updateButton"><submit button-type="button"/></field>
         <field name="_rowSubmit" title="${uiLabelMap.ProjectMgrRowSubmit}"><hidden value="Y"/></field>
     </form>
 
@@ -279,7 +279,7 @@
         </field>
     </form>
     <form name="WeekTimesheet" type="list" list-name="timeEntries" separate-columns="true"
-        odd-row-style="alternate-row" default-table-style="basic-table hover-bar">
+        odd-row-style="alternate-row" header-row-style="bg-dark text-white" default-table-style="basic-table hover-bar table table-striped small">
         <field name="timesheetId"><hidden/></field>
         <field name="taskWbsId"><display/></field>
         <field name="workEffortName" title="${uiLabelMap.ProjectMgrTaskName}">
