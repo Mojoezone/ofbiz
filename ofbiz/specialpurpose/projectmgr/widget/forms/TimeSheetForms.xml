@@ -64,12 +64,12 @@
         <field widget-style="form-control" name="total" title="${uiLabelMap.ProjectMgrActualHours}"><display/></field>
         <field widget-style="form-control" name="actualHours" title="${uiLabelMap.ProjectMgrActualTotal}"><display/></field>
         <field widget-style="form-control" name="plannedHours" title="${uiLabelMap.ProjectMgrPlanHours}"><display/></field>
-        <field widget-style="btn btn-primary" name="updateButton"><submit button-type="button"/></field>
+        <field widget-style="btn btn-primary mb-5" name="updateButton"><submit button-type="button"/></field>
         <field name="_rowSubmit" title="${uiLabelMap.ProjectMgrRowSubmit}"><hidden value="Y"/></field>
     </form>
 
     <form name="ListTimeSheets" type="list" list-name="timesheets" paginate-target="MyTimesheet"
-        odd-row-style="alternate-row" default-table-style="basic-table hover-bar">
+        odd-row-style="alternate-row" header-row-style="bg-dark text-white" default-table-style="basic-table hover-bar table table-striped">
         <actions>
             <set field="complete" value="${uiLabelMap.ProjectMgrToComplete}"/>
         </actions>
@@ -156,7 +156,7 @@
         header-row-style="header-row" default-table-style="basic-table">
         <field name="partyId"><hidden value="${userLogin.partyId}"/></field>
         <field entry-name="dummy" name="requiredDate" title="${uiLabelMap.ProjectMgrSelectedDate}"><date-time type="date"/></field>
-        <field name="addButton"><submit/></field>
+        <field widget-style="btn btn-success mt-2 mb-5" name="addButton"><submit/></field>
     </form>
 
     <form name="AddWeeklyTimesheet" type="single" target="createWeeklyTimesheet" title=""

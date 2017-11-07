@@ -126,7 +126,7 @@ under the License.
   <#assign orgName = "">
 </#if>
 
-<body>
+<body style="background-color: #e5e5e5;">
   <div id="wait-spinner" style="display:none">
     <div id="wait-spinner-image"></div>
   </div>

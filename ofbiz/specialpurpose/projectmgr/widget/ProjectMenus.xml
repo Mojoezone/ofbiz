@@ -241,7 +241,7 @@
                     <if-has-permission permission="PROJECTMGR" action="_ADMIN"/>
                 </and>
             </condition>
-            <link target="EditProject"/>
+            <link style="btn btn-secondary" target="EditProject"/>
         </menu-item>
         <menu-item name="copyProject" title="${uiLabelMap.ProjectMgrCopyProject}">
             <condition>
@@ -512,7 +512,7 @@
                     <if-compare field="timesheet.statusId" operator="equals" value="TIMESHEET_IN_PROCESS"/>
                 </and>
             </condition>
-            <link target="myTimeSheetStatusToComplete">
+            <link style="btn btn-secondary" target="myTimeSheetStatusToComplete">
                 <parameter param-name="timesheetId" from-field="timesheet.timesheetId"/>
                 <parameter param-name="statusId" value="TIMESHEET_COMPLETED"/>
             </link>

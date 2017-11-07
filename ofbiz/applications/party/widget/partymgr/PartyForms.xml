@@ -323,7 +323,7 @@ under the License.
         </sort-order>
     </form>
 
-    <form name="ViewPartyPerson" type="single" default-map-name="lookupPerson" default-table-style="table bg-light">
+    <form name="ViewPartyPerson" type="single" default-map-name="lookupPerson" default-table-style="table table-striped mb-5 bg-light">
         <field name="personalImage" use-when="partyContentId!=null" title="${uiLabelMap.FormFieldTitle_personalImage}"><image value="${personalImage}" style="cssImgStandard"/></field>
         <field name="partyId"><display/></field>
         <field name="name" title="${uiLabelMap.PartyName}"><display description="${lookupPerson.personalTitle} ${lookupPerson.firstName} ${lookupPerson.middleName} ${lookupPerson.lastName}"/></field>
@@ -522,10 +522,10 @@ under the License.
         <auto-fields-service service-name="createPartyNote"/>
         <field name="partyId"><hidden/></field>
         <field name="noteId" tooltip="${uiLabelMap.PartyOptional}"><hidden/></field>
-        <field name="noteName" title="${uiLabelMap.FormFieldTitle_noteName}" tooltip="${uiLabelMap.PartyOptional}"> </field>
-        <field name="note"><textarea cols="70" rows="10"/></field>
-        <field name="submitButton" title="${uiLabelMap.CommonSave}" widget-style="smallSubmit"><submit button-type="text-link"/></field>
-        <field name="cancelLink" title=" " widget-style="smallSubmit">
+        <field widget-style="form-control" name="noteName" title="${uiLabelMap.FormFieldTitle_noteName}" tooltip="${uiLabelMap.PartyOptional}"> </field>
+        <field widget-style="form-control" name="note"><textarea cols="70" rows="10"/></field>
+        <field name="submitButton" title="${uiLabelMap.CommonSave}" widget-style="smallSubmit btn btn-success mt-2 mb-3"><submit button-type="text-link"/></field>
+        <field name="cancelLink" title=" " widget-style="smallSubmit btn btn-warning">
             <hyperlink description="${uiLabelMap.CommonCancelDone}" target="${donePage}" also-hidden="false">
                 <parameter param-name="partyId"/>
             </hyperlink>
@@ -939,7 +939,7 @@ under the License.
         </field>
         <field name="fromDate" title="${uiLabelMap.CommonFromDate}" required-field="true"/>
         <field name="accountNumber" title="${uiLabelMap.AccountingAccountNumber}" required-field="true"/>
-        <field name="submitButton" title="${uiLabelMap.CommonAdd}"><submit button-type="button"/></field>
+        <field widget-style="btn btn-primary mt-2"  name="submitButton" title="${uiLabelMap.CommonAdd}"><submit button-type="button"/></field>
     </form>
 
     <form name="ListSubscriptions" type="list" list-name="subscriptionList" default-table-style="basic-table">

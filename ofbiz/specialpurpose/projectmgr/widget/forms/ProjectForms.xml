@@ -114,11 +114,11 @@
         <field name="add" title="${uiLabelMap.CommonAdd}"><submit/></field>
     </form>
     <form name="FindProject" type="single" target="FindProject" title="Find and List Project"
-        header-row-style="header-row" default-table-style="basic-table">
+        header-row-style="header-row" default-table-style="basic-table table table-striped">
         <field name="projectId" title="${uiLabelMap.ProjectMgrProjectId}" parameter-name="workEffortId"><text-find size="25"/></field>
         <field name="projectName" title="${uiLabelMap.ProjectMgrProjectName}" parameter-name="workEffortName"><text-find size="25"/></field>
         <field name="fromDate" title="${uiLabelMap.CommonFromDate}" parameter-name="createdStamp"><date-find/></field>
-        <field name="find" title="${uiLabelMap.CommonFind}"><submit/></field>
+        <field widget-style="btn btn-info" name="find" title="${uiLabelMap.CommonFind}"><submit/></field>
     </form>
     <form name="HoursNotYetBilled" type="list" list-name="entryList"
         odd-row-style="alternate-row" default-table-style="basic-table hover-bar">
@@ -152,7 +152,7 @@
         <field name="fromDate" position="2"><display type="date"/></field>
     </form>
     <form name="ListProjects" type="list" list-name="listIt" paginate-target="FindProject"
-        odd-row-style="alternate-row" default-table-style="basic-table hover-bar">
+        odd-row-style="alternate-row" header-row-style="bg-dark text-white" default-table-style="basic-table hover-bar table table-striped">
         <actions>
             <set field="parameters.workEffortTypeId" value="PROJECT"/>
             <set field="fieldList[]" value="workEffortId"/>
@@ -187,7 +187,7 @@
         <field name="createdStamp" title="${uiLabelMap.FormFieldTitle_createdDate}"><display type="date"/></field>
     </form>
     <form name="ListCurrentProjects" type="list" list-name="projects" paginate-target="main"
-        odd-row-style="alternate-row" default-table-style="basic-table hover-bar">
+        odd-row-style="alternate-row" header-row-style="bg-dark text-white" default-table-style="basic-table hover-bar table table-striped">
         <actions>
             <script location="component://projectmgr/groovyScripts/ListCurrentProjects.groovy"/>
         </actions>

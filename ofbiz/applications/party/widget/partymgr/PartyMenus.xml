@@ -329,7 +329,7 @@
             <condition>
                 <if-has-permission permission="PARTYMGR" action="_CREATE"/>
             </condition>
-            <link target="editCarrierAccount">
+            <link  style="btn btn-info mt-2" target="editCarrierAccount">
                 <parameter param-name="partyId" from-field="party.partyId"/>
             </link>
         </menu-item>

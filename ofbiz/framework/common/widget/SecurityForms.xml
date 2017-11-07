@@ -65,26 +65,26 @@ under the License.
     <form name="AddUserLogin" type="single" target="${createUserLoginURI}"
         focus-field-name="userLoginId" header-row-style="header-row" default-table-style="basic-table">
         <auto-fields-service service-name="createUserLogin"/>
-        <field name="partyId"><hidden/></field>
-        <field name="enabled"><hidden/></field>
-        <field name="currentPassword"><password/></field>
-        <field name="currentPasswordVerify"><password/></field>
-        <field name="requirePasswordChange">
+        <field widget-style="form-control"  name="partyId"><hidden/></field>
+        <field widget-style="form-control"  name="enabled"><hidden/></field>
+        <field widget-style="form-control"  name="currentPassword"><password/></field>
+        <field widget-style="form-control"  name="currentPasswordVerify"><password/></field>
+        <field widget-style="form-control" name="requirePasswordChange">
             <drop-down allow-empty="false" no-current-selected-key="N">
                 <option key="Y" description="${uiLabelMap.CommonY}"/>
                 <option key="N" description="${uiLabelMap.CommonN}"/>
             </drop-down>
         </field>
-        <field name="securityQuestion">
+        <field widget-style="form-control"  name="securityQuestion">
           <drop-down allow-empty="true">
               <entity-options entity-name="Enumeration" key-field-name="enumId" description="${description}">
                  <entity-constraint name="enumTypeId" operator="equals" value="SQ_STANDARD" /> 
               </entity-options>
           </drop-down>
         </field>
-        <field name="securityAnswer" title="${uiLabelMap.SecurityAnswer}"><text /></field>
-        <field name="submitButton" title="${uiLabelMap.CommonSave}" widget-style="smallSubmit"><submit button-type="text-link"/></field>
-        <field name="cancelLink" title=" " widget-style="smallSubmit">
+        <field widget-style="form-control"  name="securityAnswer" title="${uiLabelMap.SecurityAnswer}"><text /></field>
+        <field name="submitButton" title="${uiLabelMap.CommonSave}" widget-style="smallSubmit btn btn-primary mt-2 mb-3"><submit button-type="text-link"/></field>
+        <field name="cancelLink" title=" " widget-style="smallSubmit btn btn-warning">
             <hyperlink description="${uiLabelMap.CommonCancelDone}" target="${cancelPage}" also-hidden="false">
                 <parameter param-name="partyId"/>
             </hyperlink>

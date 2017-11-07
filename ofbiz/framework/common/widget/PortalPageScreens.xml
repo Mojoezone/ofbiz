@@ -100,8 +100,8 @@ under the License.
                 <decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
                     <decorator-section name="body">
                         <screenlet id="PortalPagesList" title="${uiLabelMap.CommonPortalPagesForApplication}: ${parameters.parentPortalPageId}" collapsible="true">
-                            <container style="button-bar">
-                                <link target="NewPortalPage" text="${uiLabelMap.CommonNewPortalPage}" style="buttontext create">
+                            <container style="button-bar btn btn-secondary mb-5">
+                                <link target="NewPortalPage" text="${uiLabelMap.CommonNewPortalPage}" style="buttontext create text-white">
                                     <parameter param-name="parentPortalPageId" from-field="parameters.parentPortalPageId"/>
                                 </link>
                             </container>

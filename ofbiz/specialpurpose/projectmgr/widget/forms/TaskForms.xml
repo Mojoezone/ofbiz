@@ -21,7 +21,7 @@
 <forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
     xmlns="http://ofbiz.apache.org/Widget-Form" xsi:schemaLocation="http://ofbiz.apache.org/Widget-Form http://ofbiz.apache.org/dtds/widget-form.xsd">
 
-    <form name="EditTask" type="single" target="updateTask" default-map-name="task">
+    <form name="EditTask" type="single" target="updateTask" default-map-name="task" default-table-style="table table-striped">
         <alt-target use-when="myTask!=void &amp;&amp; parameters.get(&quot;workEffortParentId&quot;)!=null" target="createMyTask"/>
         <alt-target use-when="myTask!=void &amp;&amp; parameters.get(&quot;workEffortParentId&quot;)==null" target="MyTasks"/>
         <alt-target use-when="myTask==void&amp;&amp;task==null&amp;&amp;projectId==void" target="createTask"/>
@@ -113,8 +113,8 @@
         </field>
         <field name="estimatedStartDate" title="${uiLabelMap.FormFieldTitle_estimatedStartDate}" position="1"><date-time type="date" default-value="${nowTimestamp}"/></field>
         <field name="estimatedCompletionDate" title="${uiLabelMap.FormFieldTitle_estimatedCompletionDate}" position="2"><date-time type="date"/></field>
-        <field name="add" title="${uiLabelMap.CommonAdd}" use-when="task==void || task==null"><submit/></field>
-        <field name="add" title="${uiLabelMap.CommonSave}" use-when="task!=void @and task!=null"><submit/></field> 
+        <field widget-style="btn btn-success" name="add" title="${uiLabelMap.CommonAdd}" use-when="task==void || task==null"><submit/></field>
+        <field widget-style="btn btn-success" name="add" title="${uiLabelMap.CommonSave}" use-when="task!=void @and task!=null"><submit/></field> 
     </form>
 
     <form name="AssignTaskOtherProject" type="single" target="updateTask" default-map-name="task">
@@ -152,7 +152,7 @@
         <field name="phaseDdescription" parameter-name="description" title="${uiLabelMap.CommonDescription}"><text/></field>
         <field name="save" title="${uiLabelMap.CommonSave}"><submit/></field>
     </form>
-    <form name="FindTask" type="single" target="FindTask">
+    <form name="FindTask" type="single" target="FindTask" default-table-style="table table-striped">
         <field name="noConditionFind"><hidden value="Y"/><!-- if this isn't there then with all fields empty no query will be done --></field>
         <field name="workEffortTypeId"><hidden value="TASK"/></field>
         <field name="workEffortId"  title="${uiLabelMap.ProjectMgrTaskId}"><text-find ignore-case="true"/></field>
@@ -180,10 +180,10 @@
         </field>
         <field name="projectName" title="${uiLabelMap.ProjectMgrProjectName}"><text-find ignore-case="true"/></field>
         <field name="estimatedStartDate" title="${uiLabelMap.CommonFromDate}"><date-find/></field>
-        <field name="find" title="${uiLabelMap.CommonFind}"><submit/></field>
+        <field widget-style="btn btn-info" name="find" title="${uiLabelMap.CommonFind}"><submit/></field>
     </form>
     <form name="ListTasks" type="list" separate-columns="true" title="Task List" list-name="listIt"  paginate-target="FindTask"
-        odd-row-style="alternate-row" header-row-style="header-row-2" default-table-style="basic-table hover-bar">
+        odd-row-style="alternate-row" header-row-style="header-row-2 bg-dark text-white" default-table-style="basic-table hover-bar table table-striped small">
         <actions>
             <set field="parameters.sortField" from-field="parameters.sortField" default-value="-lastStatusUpdate"/>
             <service service-name="performFind" result-map="result" result-map-list="listIt">
@@ -297,7 +297,7 @@
             </hyperlink>
         </field>
     </form>
-    <form name="AssignTaskToMe" type="single" target="addTaskAssignment">
+    <form name="AssignTaskToMe" type="single" target="addTaskAssignment" default-table-style="table">
         <alt-target use-when="parameters.get(&quot;workEffortId&quot;)==null" target="MyTasks"/>
         <field name="partyId"><hidden value="${userLogin.partyId}"/></field>
         <field name="statusId"><hidden value="PAS_ASSIGNED"/></field>
@@ -326,7 +326,7 @@
                 </entity-options>
             </drop-down>
         </field>
-        <field name="addButton"><submit/></field>
+        <field name="addButton" widget-style="btn btn-success"><submit/></field>
     </form>
     <form name="DependenciesBefore" target="removeDependency" title="" list-name="depList" type="list" separate-columns="true" paginate-target="Dependencies"
         odd-row-style="alternate-row" header-row-style="header-row-2" default-table-style="basic-table hover-bar">

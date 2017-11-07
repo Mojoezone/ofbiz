@@ -22,14 +22,14 @@ under the License.
 <div class="screenlet">
   <div class="screenlet-title-bar">
     <ul>
-      <li class="h3">${uiLabelMap.WorkEffortMyCurrentTaskList}</li>
-      <li><a href="<@ofbizContentUrl>/workeffort/control/EditWorkEffort?workEffortTypeId=TASK&amp;currentStatusId=CAL_NEEDS_ACTION</@ofbizContentUrl>">${uiLabelMap.WorkEffortNewTask}</a></li>
+      <li class="h3 mt-3">${uiLabelMap.WorkEffortMyCurrentTaskList}</li>
+      <li><a class="btn btn-secondary" href="<@ofbizContentUrl>/workeffort/control/EditWorkEffort?workEffortTypeId=TASK&amp;currentStatusId=CAL_NEEDS_ACTION</@ofbizContentUrl>">${uiLabelMap.WorkEffortNewTask}</a></li>
     </ul>
     <br class="clear"/>
   </div>
   <h3>${uiLabelMap.WorkEffortAssignedTasks}</h3>
-  <table class="basic-table hover-bar" cellspacing="0">
-    <tr class="header-row">
+  <table class="basic-table hover-bar table table-striped bg-light" cellspacing="0">
+    <tr class="header-row bg-dark text-muted">
       <td>${uiLabelMap.CommonStartDateTime}</td>
       <td>${uiLabelMap.WorkEffortPriority}</td>
       <td>${uiLabelMap.WorkEffortStatus}</td>

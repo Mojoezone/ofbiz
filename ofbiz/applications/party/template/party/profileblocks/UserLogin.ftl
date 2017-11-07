@@ -29,7 +29,7 @@ under the License.
     </div>
     <div class="screenlet-body">
       <#if userLogins?has_content>
-        <table class="basic-table table" cellspacing="0">
+        <table class="basic-table table table-striped bg-light" cellspacing="0">
           <#list userLogins as userUserLogin>
             <tr>
               <td class="label">${uiLabelMap.PartyUserLogin}</td>

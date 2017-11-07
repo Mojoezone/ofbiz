@@ -17,18 +17,18 @@ specific language governing permissions and limitations
 under the License.
 -->
 
-  <div id="partyVisits" class="screenlet">
+  <div id="partyVisits" class="screenlet mt-5">
     <div class="screenlet-title-bar">
       <ul>
         <li class="h3">${uiLabelMap.PartyVisits}</li>
-        <li><a href="<@ofbizUrl>findVisits?partyId=${partyId}</@ofbizUrl>">${uiLabelMap.CommonListAll}</a></li>
+        <li><a  class="btn btn-secondary small" href="<@ofbizUrl>findVisits?partyId=${partyId}</@ofbizUrl>">${uiLabelMap.CommonListAll}</a></li>
       </ul>
       <br class="clear" />
     </div>
     <div class="screenlet-body">
       <#if visits?has_content>
-        <table class="basic-table table" cellspacing="0">
-          <tr class="header-row bg-dark text-white">
+        <table class="basic-table table table-striped bg-light" cellspacing="0">
+          <tr class="header-row bg-dark text-muted">
             <td>${uiLabelMap.PartyVisitId}</td>
             <td>${uiLabelMap.PartyUserLogin}</td>
             <td>${uiLabelMap.PartyNewUser}</td>

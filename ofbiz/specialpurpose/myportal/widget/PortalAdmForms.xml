@@ -79,24 +79,24 @@ under the License.
         </field>
     </form>
 
-    <form name="EditPortalPage" type="single" target="${targetPortalPage}" default-map-name="portalPage">
-        <field name="portalPageId" use-when="!&quot;${portalPage.portalPageId}&quot;.equals(&quot;&quot;)" position="1"><display/></field>
-        <field name="portalPageId" use-when="&quot;${portalPage.portalPageId}&quot;.equals(&quot;&quot;)" position="1"><text/></field>
-        <field name="originalPortalPageId" position="2"><text/></field>
+    <form name="EditPortalPage" type="single" target="${targetPortalPage}" default-map-name="portalPage" default-table-style="small table table-striped">
+        <field name="portalPageId" use-when="!&quot;${portalPage.portalPageId}&quot;.equals(&quot;&quot;)" ><display/></field>
+        <field name="portalPageId" use-when="&quot;${portalPage.portalPageId}&quot;.equals(&quot;&quot;)" ><text/></field>
+        <field name="originalPortalPageId"><text/></field>
         <field name="ownerUserLoginId">
             <!-- <lookup target-form-name="LookupUserLoginAndPartyDetails"/> -->
             <text/>
         </field>
-        <field name="parentPortalPageId" position="2"><text/></field>
+        <field name="parentPortalPageId"><text/></field>
         <field name="portalPageName"><text/></field>
-        <field name="description" position="2"><text size="60"/></field>
+        <field name="description"><text size="60"/></field>
         <field name="sequenceNum"><text/></field>
         <field name="securityGroupId" >
             <drop-down allow-empty="true">
                 <entity-options description="${groupId} -- ${description}" entity-name="SecurityGroup" key-field-name="groupId"></entity-options>
             </drop-down>
         </field>
-        <field name="saveButton" position="2"><submit button-type="button"/></field>
+        <field widget-style="btn btn-primary" name="saveButton"><submit button-type="button"/></field>
     </form>
 
 </forms>

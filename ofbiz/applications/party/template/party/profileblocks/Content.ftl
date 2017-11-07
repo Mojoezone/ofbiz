@@ -32,7 +32,7 @@ under the License.
         <input type="hidden" name="contentTypeId" value="DOCUMENT"/>
         <input type="hidden" name="statusId" value="CTNT_PUBLISHED"/>
         <input type="hidden" name="partyId" value="${partyId}" id="contentPartyId"/>
-        <input type="file" name="uploadedFile" class="required error" size="25"/>
+        <input type="file" name="uploadedFile" class="required error mb-2" size="25"/>
         <div>
         <select name="partyContentTypeId" class="required error">
           <option value="">${uiLabelMap.PartySelectPurpose}</option>
@@ -46,13 +46,13 @@ under the License.
             <option value="N">${uiLabelMap.CommonNo}</option>
             <option value="Y">${uiLabelMap.CommonYes}</option>
         </select>
-        <select name="roleTypeId">
+        <select name="roleTypeId" class="d-block mt-2">
           <option value="">${uiLabelMap.PartySelectRole}</option>
           <#list roles as role>
             <option value="${role.roleTypeId}" <#if role.roleTypeId == "_NA_">selected="selected"</#if>>${role.get("description", locale)?default(role.roleTypeId)}</option>
           </#list>
         </select>
-        <input type="submit" value="${uiLabelMap.CommonUpload}" />
+        <input class="btn btn-success d-block mb-3 mt-2" type="submit" value="${uiLabelMap.CommonUpload}" />
       </form>
       <div id='progress_bar'><div></div></div>
     </div>

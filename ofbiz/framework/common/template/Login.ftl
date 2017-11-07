@@ -37,7 +37,7 @@ under the License.
         <table class="basic-table mb-0" cellspacing="0" style="border-collapse:collapse; border: none;">
           <tr style="background-color: transparent;">
             <td class="label pr-2 pb-1"  style="border-top: none;">${uiLabelMap.CommonUsername}</td>
-            <td class="pt-1" style="border-top: none; padding: 0;"><input type="text" name="USERNAME" value="${username}" size="20"/></td>
+            <td class="pt-1" style="border-top: none; padding: 0;"><input class="form-control" type="text" name="USERNAME" value="${username}" size="20"/></td>
           </tr>
           <tr>
             <td class="label pr-2" style="border-top: none;">${uiLabelMap.CommonPassword}</td>
